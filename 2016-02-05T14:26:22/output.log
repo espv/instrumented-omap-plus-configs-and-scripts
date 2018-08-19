@@ -1,0 +1,2085 @@
+Fri Feb  5 14:26:22 CET 2016 - Starting experiment
+Fri Feb  5 14:26:22 CET 2016 - Found wireless device wlp3s0
+Fri Feb  5 14:26:22 CET 2016 - Setting up phone
+Fri Feb  5 14:26:22 CET 2016 - Booting /home/oystedal/master/experiment/kernels/160129-1526-earlytx/boot.img
+Fri Feb  5 14:26:43 CET 2016 - Waiting for root access on phone...
+Fri Feb  5 14:27:04 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:27:05 CET 2016 - Setup completed. Press RETURN to start... (and then leave within 30 sec)
+Fri Feb  5 14:27:08 CET 2016 - Starting experiment in 30 seconds, leave the room and close the door
+Fri Feb  5 14:27:13 CET 2016 - STARTING
+Fri Feb  5 14:27:13 CET 2016 - START of experiment 1
+Fri Feb  5 14:27:13 CET 2016 - HEADER: exp_no=1 runtime=60 kernel=160129-1526-earlytx rate=1000 size=100 count=60000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:27:13 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:27:14 CET 2016 - pktgen_setup pps=1000 count=60000 pkt_size=100 delay=0
+Fri Feb  5 14:27:14 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:27:14 CET 2016 - Running experiment 1...
+Fri Feb  5 14:28:14 CET 2016 - Finished experiment 1
+Fri Feb  5 14:28:14 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 60000  errors: 0
+     started: 94994636098us  stopped: 95054634411us idle: 58065269us
+     seq_num: 60001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59998313(c1933043+d58065269) usec, 60000 (100byte,0frags)
+  1000pps 0Mb/sec (800000bps) errors: 0
+Fri Feb  5 14:28:14 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 1592
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 14211 entries from kernel (0, 0)
+Fri Feb  5 14:28:15 CET 2016 - adb has exited
+Fri Feb  5 14:28:18 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:28:21 CET 2016 - Emitting separator packet
+Fri Feb  5 14:28:21 CET 2016 - END of experiment 1
+Fri Feb  5 14:28:21 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:28:31 CET 2016 - START of experiment 2
+Fri Feb  5 14:28:31 CET 2016 - HEADER: exp_no=2 runtime=60 kernel=160129-1526-earlytx rate=1000 size=100 count=60000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:28:31 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:28:32 CET 2016 - pktgen_setup pps=1000 count=60000 pkt_size=100 delay=0
+Fri Feb  5 14:28:32 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:28:32 CET 2016 - Running experiment 2...
+Fri Feb  5 14:29:32 CET 2016 - Finished experiment 2
+Fri Feb  5 14:29:32 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 60000  errors: 0
+     started: 95072548138us  stopped: 95132546479us idle: 58059633us
+     seq_num: 60001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59998341(c1938707+d58059633) usec, 60000 (100byte,0frags)
+  1000pps 0Mb/sec (800000bps) errors: 0
+Fri Feb  5 14:29:32 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2038
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 11505 entries from kernel (0, 0)
+Fri Feb  5 14:29:33 CET 2016 - adb has exited
+Fri Feb  5 14:29:36 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:29:39 CET 2016 - Emitting separator packet
+Fri Feb  5 14:29:39 CET 2016 - END of experiment 2
+Fri Feb  5 14:29:39 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:29:49 CET 2016 - START of experiment 3
+Fri Feb  5 14:29:49 CET 2016 - HEADER: exp_no=3 runtime=60 kernel=160129-1526-earlytx rate=1000 size=100 count=60000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:29:49 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:29:50 CET 2016 - pktgen_setup pps=1000 count=60000 pkt_size=100 delay=0
+Fri Feb  5 14:29:50 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:29:50 CET 2016 - Running experiment 3...
+Fri Feb  5 14:30:50 CET 2016 - Finished experiment 3
+Fri Feb  5 14:30:50 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 60000  errors: 0
+     started: 95150548088us  stopped: 95210546460us idle: 58058134us
+     seq_num: 60001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59998372(c1940238+d58058134) usec, 60000 (100byte,0frags)
+  1000pps 0Mb/sec (800000bps) errors: 0
+Fri Feb  5 14:30:50 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2124
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 12768 entries from kernel (0, 0)
+Fri Feb  5 14:30:51 CET 2016 - adb has exited
+Fri Feb  5 14:30:54 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:30:57 CET 2016 - Emitting separator packet
+Fri Feb  5 14:30:57 CET 2016 - END of experiment 3
+Fri Feb  5 14:30:57 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:31:07 CET 2016 - START of experiment 4
+Fri Feb  5 14:31:07 CET 2016 - HEADER: exp_no=4 runtime=60 kernel=160129-1526-earlytx rate=2000 size=100 count=120000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:31:07 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:31:08 CET 2016 - pktgen_setup pps=2000 count=120000 pkt_size=100 delay=0
+Fri Feb  5 14:31:08 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:31:08 CET 2016 - Running experiment 4...
+Fri Feb  5 14:32:08 CET 2016 - Finished experiment 4
+Fri Feb  5 14:32:08 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 120000  errors: 0
+     started: 95228448299us  stopped: 95288447615us idle: 57510036us
+     seq_num: 120001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999315(c2489278+d57510036) usec, 120000 (100byte,0frags)
+  2000pps 1Mb/sec (1600000bps) errors: 0
+Fri Feb  5 14:32:08 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2195
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 67606 entries from kernel (0, 0)
+Fri Feb  5 14:32:10 CET 2016 - adb has exited
+Fri Feb  5 14:32:14 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:32:17 CET 2016 - Emitting separator packet
+Fri Feb  5 14:32:17 CET 2016 - END of experiment 4
+Fri Feb  5 14:32:17 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:32:27 CET 2016 - START of experiment 5
+Fri Feb  5 14:32:27 CET 2016 - HEADER: exp_no=5 runtime=60 kernel=160129-1526-earlytx rate=2000 size=100 count=120000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:32:27 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:32:28 CET 2016 - pktgen_setup pps=2000 count=120000 pkt_size=100 delay=0
+Fri Feb  5 14:32:29 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:32:29 CET 2016 - Running experiment 5...
+Fri Feb  5 14:33:29 CET 2016 - Finished experiment 5
+Fri Feb  5 14:33:29 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 120000  errors: 0
+     started: 95309160301us  stopped: 95369159379us idle: 57574938us
+     seq_num: 120001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999078(c2424140+d57574938) usec, 120000 (100byte,0frags)
+  2000pps 1Mb/sec (1600000bps) errors: 0
+Fri Feb  5 14:33:29 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2266
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 79276 entries from kernel (0, 0)
+Fri Feb  5 14:33:31 CET 2016 - adb has exited
+Fri Feb  5 14:33:36 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:33:39 CET 2016 - Emitting separator packet
+Fri Feb  5 14:33:39 CET 2016 - END of experiment 5
+Fri Feb  5 14:33:39 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:33:49 CET 2016 - START of experiment 6
+Fri Feb  5 14:33:49 CET 2016 - HEADER: exp_no=6 runtime=60 kernel=160129-1526-earlytx rate=2000 size=100 count=120000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:33:49 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:33:50 CET 2016 - pktgen_setup pps=2000 count=120000 pkt_size=100 delay=0
+Fri Feb  5 14:33:50 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:33:50 CET 2016 - Running experiment 6...
+Fri Feb  5 14:34:50 CET 2016 - Finished experiment 6
+Fri Feb  5 14:34:50 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 120000  errors: 0
+     started: 95390764268us  stopped: 95450763576us idle: 57551406us
+     seq_num: 120001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999307(c2447900+d57551406) usec, 120000 (100byte,0frags)
+  2000pps 1Mb/sec (1600000bps) errors: 0
+Fri Feb  5 14:34:50 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2318
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 92529 entries from kernel (0, 0)
+Fri Feb  5 14:34:53 CET 2016 - adb has exited
+Fri Feb  5 14:34:57 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:35:00 CET 2016 - Emitting separator packet
+Fri Feb  5 14:35:00 CET 2016 - END of experiment 6
+Fri Feb  5 14:35:00 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:35:10 CET 2016 - START of experiment 7
+Fri Feb  5 14:35:10 CET 2016 - HEADER: exp_no=7 runtime=60 kernel=160129-1526-earlytx rate=3000 size=100 count=180000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:35:10 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:35:11 CET 2016 - pktgen_setup pps=3000 count=180000 pkt_size=100 delay=0
+Fri Feb  5 14:35:11 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:35:11 CET 2016 - Running experiment 7...
+Fri Feb  5 14:36:12 CET 2016 - Finished experiment 7
+Fri Feb  5 14:36:12 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 180000  errors: 0
+     started: 95471972352us  stopped: 95531971658us idle: 56225725us
+     seq_num: 180001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999306(c3773580+d56225725) usec, 180000 (100byte,0frags)
+  3000pps 2Mb/sec (2400000bps) errors: 0
+Fri Feb  5 14:36:12 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2379
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 47425 entries from kernel (0, 0)
+Fri Feb  5 14:36:14 CET 2016 - adb has exited
+Fri Feb  5 14:36:21 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:36:24 CET 2016 - Emitting separator packet
+Fri Feb  5 14:36:24 CET 2016 - END of experiment 7
+Fri Feb  5 14:36:24 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:36:34 CET 2016 - START of experiment 8
+Fri Feb  5 14:36:34 CET 2016 - HEADER: exp_no=8 runtime=60 kernel=160129-1526-earlytx rate=3000 size=100 count=180000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:36:34 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:36:35 CET 2016 - pktgen_setup pps=3000 count=180000 pkt_size=100 delay=0
+Fri Feb  5 14:36:35 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:36:35 CET 2016 - Running experiment 8...
+Fri Feb  5 14:37:35 CET 2016 - Finished experiment 8
+Fri Feb  5 14:37:35 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 180000  errors: 0
+     started: 95555872327us  stopped: 95615871615us idle: 56285676us
+     seq_num: 180001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999287(c3713610+d56285676) usec, 180000 (100byte,0frags)
+  3000pps 2Mb/sec (2400000bps) errors: 0
+Fri Feb  5 14:37:35 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2430
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 57491 entries from kernel (0, 0)
+Fri Feb  5 14:37:38 CET 2016 - adb has exited
+Fri Feb  5 14:37:43 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:37:46 CET 2016 - Emitting separator packet
+Fri Feb  5 14:37:46 CET 2016 - END of experiment 8
+Fri Feb  5 14:37:46 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:37:57 CET 2016 - START of experiment 9
+Fri Feb  5 14:37:57 CET 2016 - HEADER: exp_no=9 runtime=60 kernel=160129-1526-earlytx rate=3000 size=100 count=180000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:37:57 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:37:58 CET 2016 - pktgen_setup pps=3000 count=180000 pkt_size=100 delay=0
+Fri Feb  5 14:37:58 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:37:58 CET 2016 - Running experiment 9...
+Fri Feb  5 14:38:58 CET 2016 - Finished experiment 9
+Fri Feb  5 14:38:58 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 180000  errors: 0
+     started: 95638268363us  stopped: 95698267721us idle: 56253739us
+     seq_num: 180001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999358(c3745618+d56253739) usec, 180000 (100byte,0frags)
+  3000pps 2Mb/sec (2400000bps) errors: 0
+Fri Feb  5 14:38:58 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2474
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 41681 entries from kernel (0, 0)
+Fri Feb  5 14:38:59 CET 2016 - adb has exited
+Fri Feb  5 14:39:05 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:39:08 CET 2016 - Emitting separator packet
+Fri Feb  5 14:39:08 CET 2016 - END of experiment 9
+Fri Feb  5 14:39:08 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:39:18 CET 2016 - START of experiment 10
+Fri Feb  5 14:39:18 CET 2016 - HEADER: exp_no=10 runtime=60 kernel=160129-1526-earlytx rate=4000 size=100 count=240000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:39:18 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:39:19 CET 2016 - pktgen_setup pps=4000 count=240000 pkt_size=100 delay=0
+Fri Feb  5 14:39:19 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:39:19 CET 2016 - Running experiment 10...
+Fri Feb  5 14:40:30 CET 2016 - Finished experiment 10
+Fri Feb  5 14:40:30 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 240000  errors: 0
+     started: 95719964353us  stopped: 95790799343us idle: 268036us
+     seq_num: 240001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 70834990(c70566953+d268036) usec, 240000 (100byte,0frags)
+  3388pps 2Mb/sec (2710400bps) errors: 0
+Fri Feb  5 14:40:30 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2541
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 60862 entries from kernel (0, 0)
+Fri Feb  5 14:40:33 CET 2016 - adb has exited
+Fri Feb  5 14:40:41 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:40:44 CET 2016 - Emitting separator packet
+Fri Feb  5 14:40:44 CET 2016 - END of experiment 10
+Fri Feb  5 14:40:44 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:40:54 CET 2016 - START of experiment 11
+Fri Feb  5 14:40:54 CET 2016 - HEADER: exp_no=11 runtime=60 kernel=160129-1526-earlytx rate=4000 size=100 count=240000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:40:55 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:40:56 CET 2016 - pktgen_setup pps=4000 count=240000 pkt_size=100 delay=0
+Fri Feb  5 14:40:56 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:40:56 CET 2016 - Running experiment 11...
+Fri Feb  5 14:42:06 CET 2016 - Finished experiment 11
+Fri Feb  5 14:42:06 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 240000  errors: 0
+     started: 95816220059us  stopped: 95886268533us idle: 461825us
+     seq_num: 240001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 70048473(c69586648+d461825) usec, 240000 (100byte,0frags)
+  3426pps 2Mb/sec (2740800bps) errors: 0
+Fri Feb  5 14:42:06 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2586
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 53212 entries from kernel (0, 0)
+Fri Feb  5 14:42:08 CET 2016 - adb has exited
+Fri Feb  5 14:42:16 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:42:19 CET 2016 - Emitting separator packet
+Fri Feb  5 14:42:19 CET 2016 - END of experiment 11
+Fri Feb  5 14:42:19 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:42:29 CET 2016 - START of experiment 12
+Fri Feb  5 14:42:29 CET 2016 - HEADER: exp_no=12 runtime=60 kernel=160129-1526-earlytx rate=4000 size=100 count=240000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:42:29 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:42:30 CET 2016 - pktgen_setup pps=4000 count=240000 pkt_size=100 delay=0
+Fri Feb  5 14:42:31 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:42:31 CET 2016 - Running experiment 12...
+Fri Feb  5 14:43:41 CET 2016 - Finished experiment 12
+Fri Feb  5 14:43:41 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 240000  errors: 0
+     started: 95911068090us  stopped: 95980984259us idle: 663759us
+     seq_num: 240001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 69916168(c69252409+d663759) usec, 240000 (100byte,0frags)
+  3432pps 2Mb/sec (2745600bps) errors: 0
+Fri Feb  5 14:43:41 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2660
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 36055 entries from kernel (0, 0)
+Fri Feb  5 14:43:42 CET 2016 - adb has exited
+Fri Feb  5 14:43:49 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:43:52 CET 2016 - Emitting separator packet
+Fri Feb  5 14:43:52 CET 2016 - END of experiment 12
+Fri Feb  5 14:43:52 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:44:02 CET 2016 - START of experiment 13
+Fri Feb  5 14:44:02 CET 2016 - HEADER: exp_no=13 runtime=60 kernel=160129-1526-earlytx rate=5000 size=100 count=300000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:44:02 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:44:03 CET 2016 - pktgen_setup pps=5000 count=300000 pkt_size=100 delay=0
+Fri Feb  5 14:44:03 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:44:03 CET 2016 - Running experiment 13...
+Fri Feb  5 14:45:30 CET 2016 - Finished experiment 13
+Fri Feb  5 14:45:30 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 300000  errors: 0
+     started: 96003584335us  stopped: 96090626364us idle: 722344us
+     seq_num: 300001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 87042028(c86319684+d722344) usec, 300000 (100byte,0frags)
+  3446pps 2Mb/sec (2756800bps) errors: 0
+Fri Feb  5 14:45:30 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2705
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+Fri Feb  5 14:45:32 CET 2016 - adb has exited
+Fri Feb  5 14:45:41 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:45:44 CET 2016 - Emitting separator packet
+Fri Feb  5 14:45:44 CET 2016 - END of experiment 13
+Fri Feb  5 14:45:44 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:45:54 CET 2016 - START of experiment 14
+Fri Feb  5 14:45:54 CET 2016 - HEADER: exp_no=14 runtime=60 kernel=160129-1526-earlytx rate=5000 size=100 count=300000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:45:54 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:45:55 CET 2016 - pktgen_setup pps=5000 count=300000 pkt_size=100 delay=0
+Fri Feb  5 14:45:55 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:45:55 CET 2016 - Running experiment 14...
+Fri Feb  5 14:47:23 CET 2016 - Finished experiment 14
+Fri Feb  5 14:47:23 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 300000  errors: 0
+     started: 96115832316us  stopped: 96203133276us idle: 681990us
+     seq_num: 300001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 87300960(c86618969+d681990) usec, 300000 (100byte,0frags)
+  3436pps 2Mb/sec (2748800bps) errors: 0
+Fri Feb  5 14:47:23 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2775
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+Fri Feb  5 14:47:24 CET 2016 - adb has exited
+Fri Feb  5 14:47:33 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:47:36 CET 2016 - Emitting separator packet
+Fri Feb  5 14:47:36 CET 2016 - END of experiment 14
+Fri Feb  5 14:47:36 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:47:46 CET 2016 - START of experiment 15
+Fri Feb  5 14:47:46 CET 2016 - HEADER: exp_no=15 runtime=60 kernel=160129-1526-earlytx rate=5000 size=100 count=300000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:47:46 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:47:47 CET 2016 - pktgen_setup pps=5000 count=300000 pkt_size=100 delay=0
+Fri Feb  5 14:47:47 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:47:47 CET 2016 - Running experiment 15...
+Fri Feb  5 14:49:16 CET 2016 - Finished experiment 15
+Fri Feb  5 14:49:16 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 300000  errors: 0
+     started: 96227640301us  stopped: 96316470079us idle: 687963us
+     seq_num: 300001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 88829777(c88141814+d687963) usec, 300000 (100byte,0frags)
+  3377pps 2Mb/sec (2701600bps) errors: 0
+Fri Feb  5 14:49:16 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2818
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 3448 entries from kernel (0, 0)
+Fri Feb  5 14:49:17 CET 2016 - adb has exited
+Fri Feb  5 14:49:27 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:49:30 CET 2016 - Emitting separator packet
+Fri Feb  5 14:49:30 CET 2016 - END of experiment 15
+Fri Feb  5 14:49:30 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:49:40 CET 2016 - Booting /home/oystedal/master/experiment/kernels/160129-1526-noearlytx/boot.img
+Fri Feb  5 14:50:01 CET 2016 - Waiting for root access on phone...
+Fri Feb  5 14:50:22 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:50:23 CET 2016 - START of experiment 16
+Fri Feb  5 14:50:23 CET 2016 - HEADER: exp_no=16 runtime=60 kernel=160129-1526-noearlytx rate=1000 size=100 count=60000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:50:23 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:50:24 CET 2016 - pktgen_setup pps=1000 count=60000 pkt_size=100 delay=0
+Fri Feb  5 14:50:24 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:50:24 CET 2016 - Running experiment 16...
+Fri Feb  5 14:51:24 CET 2016 - Finished experiment 16
+Fri Feb  5 14:51:24 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 60000  errors: 0
+     started: 96384676340us  stopped: 96444674693us idle: 54423996us
+     seq_num: 60001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59998353(c5574356+d54423996) usec, 60000 (100byte,0frags)
+  1000pps 0Mb/sec (800000bps) errors: 0
+Fri Feb  5 14:51:24 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 1015
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 27795 entries from kernel (0, 0)
+Fri Feb  5 14:51:25 CET 2016 - adb has exited
+Fri Feb  5 14:51:28 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:51:31 CET 2016 - Emitting separator packet
+Fri Feb  5 14:51:31 CET 2016 - END of experiment 16
+Fri Feb  5 14:51:31 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:51:41 CET 2016 - START of experiment 17
+Fri Feb  5 14:51:41 CET 2016 - HEADER: exp_no=17 runtime=60 kernel=160129-1526-noearlytx rate=1000 size=100 count=60000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:51:42 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:51:43 CET 2016 - pktgen_setup pps=1000 count=60000 pkt_size=100 delay=0
+Fri Feb  5 14:51:43 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:51:43 CET 2016 - Running experiment 17...
+Fri Feb  5 14:52:43 CET 2016 - Finished experiment 17
+Fri Feb  5 14:52:43 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 60000  errors: 0
+     started: 96463176275us  stopped: 96523174635us idle: 58155061us
+     seq_num: 60001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59998360(c1843298+d58155061) usec, 60000 (100byte,0frags)
+  1000pps 0Mb/sec (800000bps) errors: 0
+Fri Feb  5 14:52:43 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2122
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 21933 entries from kernel (0, 0)
+Fri Feb  5 14:52:44 CET 2016 - adb has exited
+Fri Feb  5 14:52:46 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:52:49 CET 2016 - Emitting separator packet
+Fri Feb  5 14:52:49 CET 2016 - END of experiment 17
+Fri Feb  5 14:52:49 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:52:59 CET 2016 - START of experiment 18
+Fri Feb  5 14:52:59 CET 2016 - HEADER: exp_no=18 runtime=60 kernel=160129-1526-noearlytx rate=1000 size=100 count=60000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:52:59 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:53:00 CET 2016 - pktgen_setup pps=1000 count=60000 pkt_size=100 delay=0
+Fri Feb  5 14:53:01 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:53:01 CET 2016 - Running experiment 18...
+Fri Feb  5 14:54:01 CET 2016 - Finished experiment 18
+Fri Feb  5 14:54:01 CET 2016 - Params: count 60000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 1000000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 60000  errors: 0
+     started: 96541076303us  stopped: 96601074667us idle: 58157224us
+     seq_num: 60001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59998364(c1841139+d58157224) usec, 60000 (100byte,0frags)
+  1000pps 0Mb/sec (800000bps) errors: 0
+Fri Feb  5 14:54:01 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2213
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 25959 entries from kernel (0, 0)
+Fri Feb  5 14:54:02 CET 2016 - adb has exited
+Fri Feb  5 14:54:05 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:54:08 CET 2016 - Emitting separator packet
+Fri Feb  5 14:54:08 CET 2016 - END of experiment 18
+Fri Feb  5 14:54:08 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:54:18 CET 2016 - START of experiment 19
+Fri Feb  5 14:54:18 CET 2016 - HEADER: exp_no=19 runtime=60 kernel=160129-1526-noearlytx rate=2000 size=100 count=120000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:54:18 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:54:19 CET 2016 - pktgen_setup pps=2000 count=120000 pkt_size=100 delay=0
+Fri Feb  5 14:54:19 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:54:19 CET 2016 - Running experiment 19...
+Fri Feb  5 14:55:19 CET 2016 - Finished experiment 19
+Fri Feb  5 14:55:19 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 120000  errors: 0
+     started: 96619784310us  stopped: 96679783439us idle: 57605534us
+     seq_num: 120001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999129(c2393594+d57605534) usec, 120000 (100byte,0frags)
+  2000pps 1Mb/sec (1600000bps) errors: 0
+Fri Feb  5 14:55:19 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2287
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 10379 entries from kernel (0, 0)
+Fri Feb  5 14:55:21 CET 2016 - adb has exited
+Fri Feb  5 14:55:26 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:55:29 CET 2016 - Emitting separator packet
+Fri Feb  5 14:55:29 CET 2016 - END of experiment 19
+Fri Feb  5 14:55:29 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:55:39 CET 2016 - START of experiment 20
+Fri Feb  5 14:55:39 CET 2016 - HEADER: exp_no=20 runtime=60 kernel=160129-1526-noearlytx rate=2000 size=100 count=120000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:55:39 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:55:40 CET 2016 - pktgen_setup pps=2000 count=120000 pkt_size=100 delay=0
+Fri Feb  5 14:55:40 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:55:40 CET 2016 - Running experiment 20...
+Fri Feb  5 14:56:40 CET 2016 - Finished experiment 20
+Fri Feb  5 14:56:40 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 120000  errors: 0
+     started: 96700384035us  stopped: 96760383144us idle: 57562080us
+     seq_num: 120001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999108(c2437027+d57562080) usec, 120000 (100byte,0frags)
+  2000pps 1Mb/sec (1600000bps) errors: 0
+Fri Feb  5 14:56:40 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2344
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 2965 entries from kernel (0, 0)
+Fri Feb  5 14:56:41 CET 2016 - adb has exited
+Fri Feb  5 14:56:46 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:56:49 CET 2016 - Emitting separator packet
+Fri Feb  5 14:56:49 CET 2016 - END of experiment 20
+Fri Feb  5 14:56:49 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:56:59 CET 2016 - START of experiment 21
+Fri Feb  5 14:56:59 CET 2016 - HEADER: exp_no=21 runtime=60 kernel=160129-1526-noearlytx rate=2000 size=100 count=120000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:56:59 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:57:00 CET 2016 - pktgen_setup pps=2000 count=120000 pkt_size=100 delay=0
+Fri Feb  5 14:57:00 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:57:00 CET 2016 - Running experiment 21...
+Fri Feb  5 14:58:00 CET 2016 - Finished experiment 21
+Fri Feb  5 14:58:00 CET 2016 - Params: count 120000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 500000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 120000  errors: 0
+     started: 96780284113us  stopped: 96840283467us idle: 57466530us
+     seq_num: 120001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999354(c2532823+d57466530) usec, 120000 (100byte,0frags)
+  2000pps 1Mb/sec (1600000bps) errors: 0
+Fri Feb  5 14:58:00 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2409
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 14994 entries from kernel (0, 0)
+Fri Feb  5 14:58:01 CET 2016 - adb has exited
+Fri Feb  5 14:58:05 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:58:08 CET 2016 - Emitting separator packet
+Fri Feb  5 14:58:08 CET 2016 - END of experiment 21
+Fri Feb  5 14:58:08 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:58:18 CET 2016 - START of experiment 22
+Fri Feb  5 14:58:18 CET 2016 - HEADER: exp_no=22 runtime=60 kernel=160129-1526-noearlytx rate=3000 size=100 count=180000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:58:19 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:58:20 CET 2016 - pktgen_setup pps=3000 count=180000 pkt_size=100 delay=0
+Fri Feb  5 14:58:20 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:58:20 CET 2016 - Running experiment 22...
+Fri Feb  5 14:59:20 CET 2016 - Finished experiment 22
+Fri Feb  5 14:59:20 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 180000  errors: 0
+     started: 96860280279us  stopped: 96920279602us idle: 56413964us
+     seq_num: 180001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999323(c3585359+d56413964) usec, 180000 (100byte,0frags)
+  3000pps 2Mb/sec (2400000bps) errors: 0
+Fri Feb  5 14:59:20 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2468
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 7389 entries from kernel (0, 0)
+Fri Feb  5 14:59:21 CET 2016 - adb has exited
+Fri Feb  5 14:59:27 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 14:59:30 CET 2016 - Emitting separator packet
+Fri Feb  5 14:59:30 CET 2016 - END of experiment 22
+Fri Feb  5 14:59:30 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 14:59:40 CET 2016 - START of experiment 23
+Fri Feb  5 14:59:40 CET 2016 - HEADER: exp_no=23 runtime=60 kernel=160129-1526-noearlytx rate=3000 size=100 count=180000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 14:59:40 CET 2016 - Kernel built by our hostname
+Fri Feb  5 14:59:41 CET 2016 - pktgen_setup pps=3000 count=180000 pkt_size=100 delay=0
+Fri Feb  5 14:59:41 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 14:59:41 CET 2016 - Running experiment 23...
+Fri Feb  5 15:00:41 CET 2016 - Finished experiment 23
+Fri Feb  5 15:00:41 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 180000  errors: 0
+     started: 96941388085us  stopped: 97001387696us idle: 56319596us
+     seq_num: 180001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999610(c3680014+d56319596) usec, 180000 (100byte,0frags)
+  3000pps 2Mb/sec (2400000bps) errors: 0
+Fri Feb  5 15:00:41 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2522
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 4519 entries from kernel (0, 0)
+Fri Feb  5 15:00:42 CET 2016 - adb has exited
+Fri Feb  5 15:00:48 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:00:51 CET 2016 - Emitting separator packet
+Fri Feb  5 15:00:51 CET 2016 - END of experiment 23
+Fri Feb  5 15:00:51 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:01:01 CET 2016 - START of experiment 24
+Fri Feb  5 15:01:01 CET 2016 - HEADER: exp_no=24 runtime=60 kernel=160129-1526-noearlytx rate=3000 size=100 count=180000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 15:01:01 CET 2016 - Kernel built by our hostname
+Fri Feb  5 15:01:02 CET 2016 - pktgen_setup pps=3000 count=180000 pkt_size=100 delay=0
+Fri Feb  5 15:01:03 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 15:01:03 CET 2016 - Running experiment 24...
+Fri Feb  5 15:02:03 CET 2016 - Finished experiment 24
+Fri Feb  5 15:02:03 CET 2016 - Params: count 180000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 333333  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 180000  errors: 0
+     started: 97022996094us  stopped: 97082995375us idle: 56371711us
+     seq_num: 180001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999280(c3627569+d56371711) usec, 180000 (100byte,0frags)
+  3000pps 2Mb/sec (2400000bps) errors: 0
+Fri Feb  5 15:02:03 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2565
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 8833 entries from kernel (0, 0)
+Fri Feb  5 15:02:04 CET 2016 - adb has exited
+Fri Feb  5 15:02:10 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:02:13 CET 2016 - Emitting separator packet
+Fri Feb  5 15:02:13 CET 2016 - END of experiment 24
+Fri Feb  5 15:02:13 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:02:23 CET 2016 - START of experiment 25
+Fri Feb  5 15:02:23 CET 2016 - HEADER: exp_no=25 runtime=60 kernel=160129-1526-noearlytx rate=4000 size=100 count=240000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 15:02:23 CET 2016 - Kernel built by our hostname
+Fri Feb  5 15:02:24 CET 2016 - pktgen_setup pps=4000 count=240000 pkt_size=100 delay=0
+Fri Feb  5 15:02:24 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 15:02:24 CET 2016 - Running experiment 25...
+Fri Feb  5 15:03:24 CET 2016 - Finished experiment 25
+Fri Feb  5 15:03:24 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 240000  errors: 0
+     started: 97104600299us  stopped: 97164599915us idle: 50843746us
+     seq_num: 240001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999616(c9155869+d50843746) usec, 240000 (100byte,0frags)
+  4000pps 3Mb/sec (3200000bps) errors: 0
+Fri Feb  5 15:03:24 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2623
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 97446 entries from kernel (0, 0)
+Fri Feb  5 15:03:26 CET 2016 - adb has exited
+Fri Feb  5 15:03:33 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:03:36 CET 2016 - Emitting separator packet
+Fri Feb  5 15:03:36 CET 2016 - END of experiment 25
+Fri Feb  5 15:03:36 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:03:46 CET 2016 - START of experiment 26
+Fri Feb  5 15:03:46 CET 2016 - HEADER: exp_no=26 runtime=60 kernel=160129-1526-noearlytx rate=4000 size=100 count=240000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 15:03:46 CET 2016 - Kernel built by our hostname
+Fri Feb  5 15:03:47 CET 2016 - pktgen_setup pps=4000 count=240000 pkt_size=100 delay=0
+Fri Feb  5 15:03:47 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 15:03:47 CET 2016 - Running experiment 26...
+Fri Feb  5 15:04:47 CET 2016 - Finished experiment 26
+Fri Feb  5 15:04:47 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 240000  errors: 0
+     started: 97187696098us  stopped: 97247695629us idle: 54602930us
+     seq_num: 240001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999530(c5396599+d54602930) usec, 240000 (100byte,0frags)
+  4000pps 3Mb/sec (3200000bps) errors: 0
+Fri Feb  5 15:04:47 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2675
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 93013 entries from kernel (0, 0)
+Fri Feb  5 15:04:49 CET 2016 - adb has exited
+Fri Feb  5 15:04:56 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:04:59 CET 2016 - Emitting separator packet
+Fri Feb  5 15:04:59 CET 2016 - END of experiment 26
+Fri Feb  5 15:04:59 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:05:09 CET 2016 - START of experiment 27
+Fri Feb  5 15:05:09 CET 2016 - HEADER: exp_no=27 runtime=60 kernel=160129-1526-noearlytx rate=4000 size=100 count=240000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 15:05:09 CET 2016 - Kernel built by our hostname
+Fri Feb  5 15:05:10 CET 2016 - pktgen_setup pps=4000 count=240000 pkt_size=100 delay=0
+Fri Feb  5 15:05:10 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 15:05:10 CET 2016 - Running experiment 27...
+Fri Feb  5 15:06:10 CET 2016 - Finished experiment 27
+Fri Feb  5 15:06:10 CET 2016 - Params: count 240000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 250000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 240000  errors: 0
+     started: 97270512354us  stopped: 97330511901us idle: 52621024us
+     seq_num: 240001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 59999546(c7378522+d52621024) usec, 240000 (100byte,0frags)
+  4000pps 3Mb/sec (3200000bps) errors: 0
+Fri Feb  5 15:06:10 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2751
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 96423 entries from kernel (0, 0)
+Fri Feb  5 15:06:12 CET 2016 - adb has exited
+Fri Feb  5 15:06:19 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:06:22 CET 2016 - Emitting separator packet
+Fri Feb  5 15:06:22 CET 2016 - END of experiment 27
+Fri Feb  5 15:06:22 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:06:32 CET 2016 - START of experiment 28
+Fri Feb  5 15:06:32 CET 2016 - HEADER: exp_no=28 runtime=60 kernel=160129-1526-noearlytx rate=5000 size=100 count=300000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 15:06:32 CET 2016 - Kernel built by our hostname
+Fri Feb  5 15:06:33 CET 2016 - pktgen_setup pps=5000 count=300000 pkt_size=100 delay=0
+Fri Feb  5 15:06:33 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 15:06:33 CET 2016 - Running experiment 28...
+Fri Feb  5 15:07:35 CET 2016 - Finished experiment 28
+Fri Feb  5 15:07:35 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 300000  errors: 0
+     started: 97353420063us  stopped: 97415817833us idle: 672559us
+     seq_num: 300001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 62397769(c61725210+d672559) usec, 300000 (100byte,0frags)
+  4807pps 3Mb/sec (3845600bps) errors: 0
+Fri Feb  5 15:07:35 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2793
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 33429 entries from kernel (0, 0)
+Fri Feb  5 15:07:37 CET 2016 - adb has exited
+Fri Feb  5 15:07:43 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:07:46 CET 2016 - Emitting separator packet
+Fri Feb  5 15:07:46 CET 2016 - END of experiment 28
+Fri Feb  5 15:07:46 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:07:56 CET 2016 - START of experiment 29
+Fri Feb  5 15:07:56 CET 2016 - HEADER: exp_no=29 runtime=60 kernel=160129-1526-noearlytx rate=5000 size=100 count=300000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 15:07:56 CET 2016 - Kernel built by our hostname
+Fri Feb  5 15:07:57 CET 2016 - pktgen_setup pps=5000 count=300000 pkt_size=100 delay=0
+Fri Feb  5 15:07:58 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 15:07:58 CET 2016 - Running experiment 29...
+Fri Feb  5 15:09:01 CET 2016 - Finished experiment 29
+Fri Feb  5 15:09:01 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 300000  errors: 0
+     started: 97438124282us  stopped: 97500877834us idle: 728269us
+     seq_num: 300001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 62753552(c62025282+d728269) usec, 300000 (100byte,0frags)
+  4780pps 3Mb/sec (3824000bps) errors: 0
+Fri Feb  5 15:09:01 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2837
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 56562 entries from kernel (0, 0)
+Fri Feb  5 15:09:03 CET 2016 - adb has exited
+Fri Feb  5 15:09:11 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:09:14 CET 2016 - Emitting separator packet
+Fri Feb  5 15:09:14 CET 2016 - END of experiment 29
+Fri Feb  5 15:09:14 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:09:24 CET 2016 - START of experiment 30
+Fri Feb  5 15:09:24 CET 2016 - HEADER: exp_no=30 runtime=60 kernel=160129-1526-noearlytx rate=5000 size=100 count=300000 phone_rate=0 phone_count=0 phone_delay=
+Fri Feb  5 15:09:24 CET 2016 - Kernel built by our hostname
+Fri Feb  5 15:09:25 CET 2016 - pktgen_setup pps=5000 count=300000 pkt_size=100 delay=0
+Fri Feb  5 15:09:26 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 0  errors: 0
+     started: 0us  stopped: 0us idle: 0us
+     seq_num: 0  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 0  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: udp_src_max=10
+Fri Feb  5 15:09:26 CET 2016 - Running experiment 30...
+Fri Feb  5 15:10:28 CET 2016 - Finished experiment 30
+Fri Feb  5 15:10:29 CET 2016 - Params: count 300000  min_pkt_size: 100  max_pkt_size: 100
+     frags: 0  delay: 200000  clone_skb: 0  ifname: wlp3s0
+     flows: 0 flowlen: 0
+     queue_map_min: 0  queue_map_max: 0
+     dst_min: 10.46.47.60  dst_max: 
+     src_min: 10.46.47.30  src_max: 10.46.47.30
+     src_mac: 00:16:ea:ba:7e:e8 dst_mac: a0:0b:ba:cc:d4:37
+     udp_src_min: 10  udp_src_max: 10  udp_dst_min: 9  udp_dst_max: 9
+     src_mac_count: 0  dst_mac_count: 0
+     Flags: 
+Current:
+     pkts-sofar: 300000  errors: 0
+     started: 97526184374us  stopped: 97588926695us idle: 2196025us
+     seq_num: 300001  cur_dst_mac_offset: 0  cur_src_mac_offset: 0
+     cur_saddr: 10.46.47.30  cur_daddr: 10.46.47.60
+     cur_udp_dst: 9  cur_udp_src: 10
+     cur_queue_map: 0
+     flows: 0
+Result: OK: 62742320(c60546295+d2196025) usec, 300000 (100byte,0frags)
+  4781pps 3Mb/sec (3824800bps) errors: 0
+Fri Feb  5 15:10:29 CET 2016 - Stopping tracing on phone...
+PHONE[usnl] - USNL now running
+PHONE[usnl] - Size of sepentry: 32
+PHONE[usnl] - PID: 2905
+PHONE[usnl] - Opening file /sdcard/trace.out
+PHONE[usnl] - Got 0 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - Got 100000 entries from kernel (0, 0)
+PHONE[usnl] - Getting entries from kernel:
+PHONE[usnl] - STOP_TRACING received
+PHONE[usnl] - Exiting loop...
+PHONE[usnl] - Got 33450 entries from kernel (0, 0)
+Fri Feb  5 15:10:30 CET 2016 - adb has exited
+Fri Feb  5 15:10:38 CET 2016 - 3s before emitting separator packet...
+Fri Feb  5 15:10:41 CET 2016 - Emitting separator packet
+Fri Feb  5 15:10:41 CET 2016 - END of experiment 30
+Fri Feb  5 15:10:41 CET 2016 - Sleeping 10s before next experiment...
+Fri Feb  5 15:10:51 CET 2016 - ALL DONE

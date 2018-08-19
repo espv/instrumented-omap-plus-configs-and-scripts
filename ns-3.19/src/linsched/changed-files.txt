@@ -1,0 +1,23 @@
+include/linux/semaphore.h:10: * STEIN: added linsched ifndefs
+kernel/semaphore.c:229:	/* Added by STEIN: We can not store variables on the
+kernel/semaphore.c:258:   only call schedule directly.  STEIN. */
+kernel/semaphore.c:264:/* Added by STEIN: We do not check waiter up at this
+kernel/semaphore.c:319:	/* Added by STEIN: Since we allocated the struct semaphore_waiter
+kernel/semaphore.c~:229:	/* Added by STEIN: We can not store variables on the
+kernel/semaphore.c~:258:   only call schedule directly.  STEIN. */
+kernel/semaphore.c~:264:/* Added by STEIN: We do not check waiter up at this
+kernel/semaphore.c~:319:	/* Added by STEIN: Since we allocated the struct semaphore_waiter
+linsched/stubs.c~:43:/* STEIN */
+linsched/stubs.c~:45:/* STEIN */
+linsched/stubs.c~:203:/* Added by STEIN */
+linsched/stubs.c~:210:/* STEIN */
+linsched/linux_linsched.h:310:/* STEIN */
+linsched/linux_linsched.h:312:/* STEIN */
+linsched/#stubs.c#:43:/* STEIN */
+linsched/#stubs.c#:45:/* STEIN */
+linsched/#stubs.c#:202:/* Added by STEIN */
+linsched/#stubs.c#:209:/* STEIN */
+linsched/stubs.c:43:/* STEIN */
+linsched/stubs.c:45:/* STEIN */
+linsched/stubs.c:202:/* Added by STEIN */
+linsched/stubs.c:209:/* STEIN */

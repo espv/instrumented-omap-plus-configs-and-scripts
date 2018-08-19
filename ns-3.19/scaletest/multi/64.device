@@ -1,0 +1,168 @@
+QUEUES
+input	     FIFO 	 -1    packets
+internal	 FIFO 	 -1    packets
+out     	 FIFO 	 1    packets
+# Fake IRQ queue, not used
+HIRQ	     FIFO 	 -1    services
+
+HARDWARE
+PEU 1200 cpu0 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu1 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu2 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu3 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu4 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu5 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu6 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu7 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu8 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu9 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu10 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu11 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu12 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu13 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu14 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu15 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu16 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu17 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu18 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu19 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu20 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu21 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu22 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu23 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu24 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu25 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu26 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu27 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu28 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu29 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu30 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu31 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu32 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu33 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu34 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu35 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu36 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu37 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu38 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu39 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu40 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu41 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu42 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu43 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu44 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu45 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu46 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu47 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu48 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu49 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu50 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu51 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu52 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu53 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu54 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu55 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu56 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu57 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu58 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu59 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu60 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu61 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu62 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu63 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+
+SYNCH
+sem 0 0
+
+CONDITIONS
+TRIGGERS
+
+# Fake IRQ handler, not used
+SIGSTART
+NAME irq_enter
+PEU cpu
+RESOURCES cycles normal
+FRACTION 70%  11552 16388
+0 START
+0 STOP
+SIGEND
+
+SIGSTART
+NAME service_a
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+
+x QUEUECOND input input empty
+x PROCESS 1000 50
+0 STOP
+
+SIGEND
+
+SIGSTART
+NAME service_a
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+x QUEUECOND input input notempty
+x PROCESS 1000 50
+x DEQUEUE PKTQUEUE 0 input
+x PROCESS 1000 50
+x ENQUEUE PKTQUEUE 0 internal
+x PROCESS 1000 50
+x SEMUP sem global
+x PROCESS 1000 50
+
+0 STOP
+
+SIGEND
+
+
+SIGSTART
+NAME service_b
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+x SEMDOWN sem global
+x PROCESS 1000 50
+x DEQUEUE PKTQUEUE 0 internal
+x PROCESS 1000 50
+x ENQUEUE PKTQUEUE 0 out
+x PROCESS 1000 50
+0 STOP
+
+SIGEND
+
+
+SIGSTART
+NAME background_work
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+0 STOP
+
+SIGEND
+
+THREADS
+t1 service_a infinite 0
+t2 service_b infinite 0
+t3 service_b infinite 0
+# t4 service_b infinite 0
+# t5 service_b infinite 0
+background1 background_work infinite 0
+background2 background_work infinite 0
+# background3 background_work infinite 0
+# background4 background_work infinite 0
+# background5 background_work infinite 0

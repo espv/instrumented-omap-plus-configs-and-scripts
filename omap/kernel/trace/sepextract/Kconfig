@@ -1,0 +1,3 @@
+config SEPEXTRACT
+       bool "Signature Extraction"
+       depends on FUNCTION_TRACER

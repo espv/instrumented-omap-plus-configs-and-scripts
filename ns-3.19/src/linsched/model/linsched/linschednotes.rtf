@@ -1,0 +1,238 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red53\green78\blue146;\red250\green251\blue252;
+\red53\green78\blue146;\red250\green251\blue252;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww48500\viewh27840\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 INITIALIZATION:\
+First, linsched_init must be called with the topology of choice. \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\fs26 \cf2 For the rest, we will consider the simulation called "fractional CPU test", which uses a set of protagonist (to measure) and antagonist (background load) during the simulation. Configurable parameters are:\
+\pard\pardeftab720\ql\qnatural
+\cf2 \
+\'a0\'a0\'a0 - The number of protagonists\
+\'a0\'a0\'a0 - The number of antagonists\
+\'a0\'a0\'a0 - The share for protagonists (pshare)\
+\'a0\'a0\'a0 - The share for antagonists (ashare)\
+\'a0\'a0\'a0 - Busy time for threads\
+\'a0\'a0\'a0 - Sleep time for threads\
+\
+In addition comes the simulation duration, which has a default value of 60 seconds (60000 jiffies, each 1 mz in a system where HZ = 1000 - that is, when the computer is a fast one, according to [1]).\
+\
+- The overall essential steps are:\
+\'a0\'a0\'a0 (1) Create task groups\
+\'a0\'a0\'a0 (2) Create threads\
+\'a0\'a0\'a0 (3) Assign threads to task groups\
+\'a0\'a0\'a0 (4) Start simulation\
+\'a0\'a0\'a0 (5) Print statistics\
+\
+(1) Creating task groups are performed by means of linsched_create_task_group. This is quite straight forward - its just nice to know that the scheduler first schedules groups, then tasks within them. linsched_create_task_group taskes one argument only: an integer value of the parent group, and returns the handle to the new group (i.e., this forms a group hierarchy). The root group has handle 0.\
+\
+FCT: This creates two task groups, one for protagonists and one for antagonists. They are grouped because the share is set on the group as a whole to pshare and ashare (see above) by means of the function linsched_set_task_group_shares, receiving the group handle and the share as arguments.\
+\
+(2) Creating a thread is realized by means of the function linsched_create_normal_task. This takes two arguments: a struct task_data and the nice value (priority), and it returns the LinSched task ID (index into __linsched_tasks array) of the new task. Also, the id-field of the task struct (PID?) is set to this value. The essential thing this function will do, however, is to call __linsched_create_task(td), where td was the task_data struct passed to this function.\
+\
+linsched_create_task will call do_fork(0,0,0,0,0,0,td), i.e., passing td also to this function (check this function). do_fork has this extra argument for LinSched specifically, i.e., this argument is not there for a real kernel. The LinSched version of this function will do there things: (1) copy_process with only 0/NULL as arguments (because all argument values were 0 for do_fork), (2) add the td to the task structs td field (this field is there only for LinSched), and (3) call wake_up_new_task with the new task struct pointer and the clone_flags which were also 0. Finally, it will return the pointer to the new task struct. The interresting parts now are hence copy_process and wake_up_new_task.\
+\
+copy_process is quite a large function. In the LinSched version, it calls dup_task_struct, copy_creds, sets p->did_exec = 0, calls copy_flags, INIT_LIST_HEAD on p->children and p->sibling, \
+\
+copy_process (in assignments, if nothing else is stated, this regards a field in the new task struct p):\
+\'a0\'a0\'a0 calls dup_task_struct\
+\'a0\'a0\'a0 copy_creds\
+\'a0\'a0\'a0 did_exec = 0\
+\'a0\'a0\'a0 copy flags\
+\'a0\'a0\'a0 INIT_LIST_HEAD on p->children and p->sibling\
+\'a0\'a0\'a0 vfork_done = NULL\
+\'a0\'a0\'a0 utime,stime,gtime,utimescaled,stimescaled,prev_utime,prev_stime = cputime_zero\
+\'a0\'a0\'a0 default_timer_slack_ns = current->timer_slack_ns\
+\'a0\'a0\'a0 posix_cpu_timers_init\
+\'a0\'a0\'a0 lock_depth = -1\
+\'a0\'a0\'a0 calls do_posix_monotonix_gettime(&p->start_time)\
+\'a0\'a0\'a0 real_start_time = p->start_time\
+\'a0\'a0\'a0 io_context, audit_context = NULL\
+\'a0\'a0\'a0 calls cgroup_fork\
+\'a0\'a0\'a0 hardirqs_enabled = 0 (because no defines are done, right?)\
+\'a0\'a0\'a0 p->hardirq* and softirq* = 0 except softirqs_enabled = 1 and softirq_disable/enable_ip = THIS_IP\
+\'a0\'a0\'a0 calls sched_fork(p, clone_flags)\
+\'a0\'a0\'a0 p->tgid = p->pid\
+\'a0\'a0\'a0 calls clear_all_latency_tracing(p)\
+\'a0\'a0\'a0 exit_signal, pdeatch_signal, exit_state = 0\
+\'a0\'a0\'a0 group_leader = p (it seems all tasks are in their own group with only itself as member?)\
+\'a0\'a0\'a0 calls INIT_LIST_HEAD on p->thread_group\
+\'a0\'a0\'a0 real_paren = current\
+\'a0\'a0\'a0 parent_exec_id = self_exec_id\
+\'a0\'a0\'a0 takes a spin_lock (not needed, but did not bother removing it?)\
+\'a0\'a0\'a0 calls list_add_tail_rcu (&p->tasks, &init_tasks.tasks)\
+    return p\
+
+\f0\fs24 \cf0      (may jump to a later label during errors, but we do not consider this here\'85 anyway, its quite trivial: do some cleanup/free and return error value)\
+\
+wake_up_task basically sets state to TASK_RUNNING, selects a proper runqueue and calls activate_task(rq, p, 0) which simply adds the task to the runqueue. Finally calls put_cpu which is a macro for preempt_enable().\
+\
+One of the main things here is of course how to create the task_data struct that is passed to linesched_create_task. This struct is create with the function linsched_create_sleep_run, which takes two integer parameters sleep and busy, and returns a pointer to the task_data struct. Does the following:\
+	Allocate empty task_data struct td with malloc\
+	Allocate a sleep_run_data struct s with malloc\
+	Set d->sleep to the sleep function argument\
+	Set d->busy to the busy function argument\
+	Set ts->data to d\
+	td->init_task is set to the function sleep_run_init\
+	td->handle_task is set to the function sleep_run_handle\
+	A pointer to td is returned\
+\
+So, here we have two new functions sleep_run_init and sleep_run_handle. The first does:\
+	Sets td->d->p to the task_struct containing it p\
+	sets d->last_start to 0\
+	initializes the hrtimer d->timer with hrtimer_init(&d->timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL). This empties &d->timer struct, and sets its field base to the clock base at index CLOCK_MONOTONIC in the CPU var variable cpu_bases\
+	sets the timer function d->timer.function to wake_task\
+\
+The wake_task function simply calls wake_up_process, which calls try_to_wake_up on the process p.\
+\
+Since td->handle_task is set to sleep_run_handle, this is the function that is called in the event_loop explained below. sleep_run_handle does not do anything if what is returned by task_exec_time( p) is less than d->busy nanoseconds after d->last_start. This is calculated as cur - d->last_start, so both are absolute values within the process runtime, but naturally relative to the global time. This is important in relation to the event loop where an inner while loop will execute until the current is not changed, which this function will not if the task has not run long enough.\
+If it has run for more than busy ns since the last start, the function will set last_start to cur. Note that cur is what task_exec_time returned, which is p->se.sum_exec_runtime, i.e., absolute "within process runtime" as mentioned before. Next, if d->sleep is not 0, which means it should sleep, it will set p->state to TASK_INTERRUPTIBLE, initialize the timer for when it should wake up based on sleep by hrtimer_set_expires(&d->timer, ns_to_ktime(d->sleep * NSEC_PER_MSEC)). Then, it will start the timer by hrtimer_start_expires(&d->timer, HRTIMER_MODEL_REL). Finally, it will call schedule(). Due to this schedule call, current may change as pointed out below in the event loop description.\
+\
+What needs to be described now is the hrtimer_set_expires and hrtimer_start_expires. These should then alter the LinSched event loop, right? In order to start the whole thing\'85 well.. lets see: hrtimer_set_expires simply sets the _expires and _softexpires to the time given as argument (this value is simply a ktime struct created with ns_to_ktime seen above). The hr_timer_start_expires will insert the timer into the rb-tree of the base of timer (set above). \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 EVENT LOOP:\
+- The main loop will run while current time is less than the maximum in the simulator (KTIME_MAX) and the current jiffies are less than the last to simulate (initial_jiffies + sim_ticks).\
+- evt is an unsigned long that is initially set to KTIME_MAX\
+- all CPUs have an entry in the next_event array, CPU i at next_event[i]. This entry contains the next event to handle for that CPU, and is also simply an unsigned long. The value of that entry is compared to that of vet, and if it is lower, evt will be set to that value. Also, every time evt is set to the next_event of a CPU, the corresponding bit in the cpu mask runnable is enabled. In effect, evt will attain the value of the first event to be handled among the CPUs, and all CPUs that have that same next_event to be handled will be indicated in the runnable cpu mask. Several CPUs having an event at the exact same time is very unlikely, according to the comments.\
+- For a uniprocessor and -core simulation, the above step would simply be to set evt to the next event in next_event[0], and setting bit no. 0 in runnable to 1.\
+- current_time is set to evt. this variable belongs to the simulator alone, i.e., does not come from the linux code.\
+- Next, there is an inner for-loop that iterates runnable, setting active_cpu to the no. of the CPU to handle.\
+- Initially, the next event of the active CPU is set to KTIME_MAX, presumably to avoid it being executed again if no new events are scheduled.\
+- Next, a call to linsched_change_cpu(active_cpu). This only contains "\{{\field{\*\fldinst{HYPERLINK "applewebdata://6DEB35FF-FD73-452C-BA6B-02A92E2F37BC/stubs_8c.html#ac56ebce2d0a018a5360142233d88665c"}}{\fldrslt 
+\f2 \cf3 \cb4 \ul \ulc3 __linsched_curr_cpu}}
+\f2 \cb4  = {\field{\*\fldinst{HYPERLINK "applewebdata://6DEB35FF-FD73-452C-BA6B-02A92E2F37BC/arch_2arm_2plat-samsung_2init_8c.html#a0b925c6c516d8dc4fa58be0b53515366"}}{\fldrslt \cf3 cpu}};\}", and is therefore purely simulator specific.\
+
+\f0 \cb1 - After this, the main event code is executed. The event handlers are stored in clock_event_device structs in the array linsched_hrt. This struct is part of the linux codebase, and is defined in include/linux/clockchips.h. It contains one field *event_handler, which is called by the linsched event loop. Thus, LinSched re-uses the timer code of the linux codebase to realize discrete event simulation. The event-handler receives a pointer to the struct that contained a pointer to itself.\
+- If, after handling the event, the current cpu is idle, and the value returned by need_resched (which is a variable potentially set by the kernel code base) is negative, the function tick_nohz_stop_sched_tick(1) is issued with argument 1. This function, according to doxygen, is empty, i.e., does nothing. This is because CONFIC_NO_HZ is not defied, although LinSched readme states that it simulates this. Maybe it does not matter, however it is a strange thing to me.\
+- Next, linsched_check_resched() is called. This will call schedule() if the current processor needs rescheduling (while need_resched()). need_resched will return true if the current process should be scheduled out. Thus, this loop should stop when schedule() have switched in a process that should be allowed to run.\
+- If the CPU is idle here, tick_nohz_restart_sched_tick() will be called, which as the stop equivalent above, does not do anything in LinSched (again, because CONFIG_NO_HZ is not defined. In fact, LinSched is compiled without any .config-defines at all).\
+- The context_switch here should normally change the stack. However, since this is a simulation, what happens? Well, in LinSched context_switch() only executed prepare_task_switch(rq, prev, next) and finish_task_switch(this_rq(), prev). In fact, prepare_task_switch does nothing (according to Doxygen). Except from some perf_event stuff, finish_task_switch also seems to do nothing. Thus, no work is really done in context switch. However, LinSched only relies on prev and next, which IS swapped already in the function schedule() by the two lines calling put_prev_task(rq, prev) and next = pick_next_task(rq).\
+- In summary, the linsched_check_resched() really only traverses runqueues with prev/next until hitting one that should run (i.e., does not have need_resched()).\
+- Next there is yet an inner do-while loop, that calls current->td->handle_task(current, current->td->data), if current has this task_data set and this task_data has the handle_task function set. This is set up during the set-up of the simulation. The handle_data function may then change current\'85 but this I must confirm by looking at some of the initialization code.\
+- Then, when the inner do-while is done, and the also the enclosing per-cpu for-loop, the outer while-loop will continue running until one of two things happen: (1) No new events are scheduled by event_handler(), in which case current_time will be set to KTIME_MAX and the initial test in the while will fail, (2) the jiffies variable from the kernel codebase will be set to a value larger than initial_jiffies + sim_ticks, in which case the time to simulate have exceeded that which was specified by the user (sim_ticks).\
+\
+LINKING INITIALIZATION WITH EVENT LOOP TO UNDERSTAND THE COMPLETE PICTURE:\
+- current_time is updates according to next_event[CPU]. Note that current time is not updated anywhere else, and this is the cause why the innermost loop terminates after a while, and this is IN FACT a proper discrete event simulation system, i.e., no unneccessary stepping through ticks without any work to do (were using a tickless scheduler).\
+- The event-queue is realized by the next_event-array. Somewhere this must be set, and this is only set in the function linsched_hrt_set_next_event. The only place this is referenced in the LinSched code is when in linsched_init_hrtimer when linsched_hrt_base.set_next_event is set to this function.\
+  THUS: the only way the next_event[CPU] can be set is if the clock_event_device is used for this.\
+  In fact, next_event is set to KTIME_MAX in linsched_init_hrtimer, but naturally some events must ocurr before that. The question then becomes, where is the set_next_event field used?\
+  Well, the only place I found where it is used is in the function clockevents_program_event in kernel/time/clockevents.c. This is called four places:\
+\
+time/tick-broadcast.c:198:		if (!clockevents_program_event(dev, next, ktime_get()))\
+time/tick-common.c:102:		if (!clockevents_program_event(dev, next, ktime_get()))\
+time/tick-common.c:145:			if (!clockevents_program_event(dev, next, ktime_get()))\
+time/tick-oneshot.c:58:		int ret = clockevents_program_event(dev, expires, now);\
+\
+From tick-common, we have tick_handle_periodic and tick_setup_periodic. But, perhaps were using oneshot because we are tickless? Here, we have tick_dev_program events using the program function above. Lets search for "tick" in the linsched folder: nada.\
+BUT, the function calling this function is tick_program_event, which is called by the following:\
+\
+hrtimer.c:547:		tick_program_event(cpu_base->expires_next, 1);\
+hrtimer.c:602:	res = tick_program_event(expires, 0);\
+hrtimer.c:1333:	    !tick_program_event(expires_next, 0)) \{\
+hrtimer.c:1371:	tick_program_event(expires_next, 1);\
+time/tick-broadcast.c:490:				tick_program_event(dev->next_event, 1);\
+time/tick-internal.h:27:extern int tick_program_event(ktime_t expires, int force);\
+time/tick-internal.h:63:static inline int tick_program_event(ktime_t expires, int force)\
+time/tick-oneshot.c:49: * tick_program_event internal worker function\
+time/tick-oneshot.c:94: * tick_program_event\
+time/tick-oneshot.c:96:int tick_program_event(ktime_t expires, int force)\
+time/tick-oneshot.c:112:	tick_program_event(ktime_get(), 1);\
+time/tick-sched.c:458:		\} else if (!tick_program_event(expires, 0))\
+time/tick-sched.c:507:			if (!tick_program_event(\
+time/tick-sched.c:588:	return tick_program_event(hrtimer_get_expires(&ts->sched_timer), 0);\
+time/tick-sched.c:674:		if (!tick_program_event(next, 0))\
+\
+This is interresting, because here we are in hrtimer.c! Fell things are getting very hot here! Maybe were lucky enough to recognize some of the functions calling this in hrtimer! Lets see\'85 First one is hrtimer_force_reprogram (this rings a bell!). Next one is hrtimer_reprogram. The third one is hrtimer_interrupt (most probably not used here), which is backed by the fact that there are no infdef(LINSCHED) there. ok, the last one is also hrtimer_interrupt. What is important to remember is the other unsolved issue: what is the event_handler\'85 we'll look at that a bit later.\
+\
+Ok, so we have (probably) narrowed this down to hrtimer(_force)_reprogram. I think this rings a bell\'85lest search in linsched folder again: nada still. But is IS called by __remove_hrtimer, which called by remove_hrtimer. These are called by __hrtimer_start_range_ns(, hrtimer_try_to_cancel) and __run_hrtimer. Lets see if we find hrtimer_start_range_ns in linsched: nada still! \'85 but I remember this. It is called here:\
+\
+\'85\
+sched.c:218:		__hrtimer_start_range_ns(&rt_b->rt_period_timer, soft, delta,\
+sched.c:1157:	__hrtimer_start_range_ns(&rq->hrtick_timer, ns_to_ktime(delay), 0,\
+\
+Well, the first is start_rt_bandwidth, which is only for real-time, so no.. Second one is hrtick_start. This must be called somewhere\'85 But this gets me wondering, does this mean next_event is only updated by hrticks??? If so, this is not tickless!\
+\
+AHA, I found one path - I did not find this because: DOXYGEN SAYS HRTIMER_FORCE_REPROGRAM IS EMPTY!! Why is that? So, we you can see above, this is called by \'85 ok heres the whole ting:\
+\
+linsched_run_sim\
+sleep_run_handle (handle_task set in linsched_create_sleep_run)\
+hrtimer_start_expires\
+hrtimer_start_range_ns\
+__hrtimer_start_range_ns\
+remove_hrtimer\
+__remove_hrtimer\
+hrtimer_force_reprogram (seems to be if this is the next timer to expire) <----- THIS IS THE FUNCTION DOXYGEN SAYS IS EMPTY! This is probably because is is only included if CONFIG_HIGH_RES_TIMERS is included. How does doxygen handle such defined sections anyway? Maybe doxygen is not the proper tool for this after all, as it really can not know which defines are made when compiling.\
+tick_program_event\
+tick_dev_program_event\
+clockevents_program_event(dev, expires, now) \{\
+\'85\
+return dev->set_next_event(clc, dev);\
+\}\
+\
+VOILA!!! This means, every time the handle_task is run, the next event will be entered into the next_event of the CPU via set_next_event! Wonderful :) But the most important thing:\
+\
+			THIS IS TICKLESS :D :D :D TICKLESS MEANS PERFORMANCE, SO NO WORRIES, BROTHER!\
+\
+So in retrospect, we can see that we just set the "virtual device" set_next_event function, but traverse the hrtimer subsystem in the linux kernel to call this in a proper way. Therefore, to port the code to real linux, simply another, real and physical device must be exchanged with our virtual one :)\
+\
+Also, the reason there is only one next event is thus that there is always only one time in the future where \
+\
+Now, the only question that remains is: which function is the event_handler, and where is it set? From what we have learned above, I would look in hrtimer.c and the files in kernel/time. Continue this tomorrow (were really close now!).\
+\
+(the next day:)\
+\
+Ok, I just found that if CONFIG_HIGH_RES_TIMERS is defined, tick_inig_highres(void) will set the event_handler of the CPU variable tick_cpu_device to hrtimer_interrupt. Which was what I suspected! This means that, in real life, when the timer interrupt occurs, it will call the function pointed to by event_handler of tick_cpu_device, and thereby execute hrtimer_interrupt. In the LinSched simulation, on the other hand, the event handler is executed explicitly in the event loop after current_time is set to next_event, which as stated above is set when running handle_task of the tasks.\
+\
+Ok, here's start_kernel after removing the parts which is not part of LinSched:\
+\pard\pardeftab720\sl300\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "applewebdata://60A56831-7556-4897-AD1B-B075D8AE5EFB/tick-common_8c.html#a3a4fd8e9983bbabe35cb974719ffca56"}}{\fldrslt 
+\f2 \cf5 \cb6 tick_init}}
+\f2 \cb6 (); NADA\
+\pard\pardeftab720\sl300\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "applewebdata://4F20B968-A2BB-4743-B5A6-FD34D4E04901/smp__64_8c.html#ac8b82138ec0a2b741025f4448ceded55"}}{\fldrslt \cf5 setup_per_cpu_areas}}(); \
+\pard\pardeftab720\sl300\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "applewebdata://3E661D93-8F35-4461-9290-928E00A10941/kernel_2sched_8c.html#a9bde438b398ba8fb209e5c5b024c1778"}}{\fldrslt \cf5 sched_init}}();\
+\pard\pardeftab720\sl300\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "applewebdata://60C6BA27-D578-4DB5-9CE6-DF788A4B5669/hrtimer_8h.html#a147ec45f573332149672c2b56b737a33"}}{\fldrslt \cf5 \ul \ulc5 hrtimers_init}}(); NADA (according to Doxygen, and a bit of searching\'85 maybe not enough)\
+\pard\pardeftab720\sl300\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "applewebdata://D3922240-83C7-4B45-AC10-0100D06F104C/timekeeping_8c.html#a4348e6b787781424b708d0b4f31aff66"}}{\fldrslt \cf5 timekeeping_init}}(); NADA\
+\pard\pardeftab720\sl300\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "applewebdata://5AC56D17-30E4-4F1B-B475-5D43EACD8533/sched__clock_8c.html#a5b039566364810d8fcd08f63f0ae7b93"}}{\fldrslt \cf5 \ul \ulc5 sched_clock_init}}(); \{{\field{\*\fldinst{HYPERLINK "applewebdata://5118A3DF-F777-4E4D-96E6-2DBB1CEE0552/sched__clock_8c.html#a4a5a35e93f34aa820928396630817230"}}{\fldrslt \cf5 sched_clock_running}} = 1;\}\
+\pard\pardeftab720\sl300\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "applewebdata://CED7D1E9-F637-4909-A09E-5986BCF754C1/init_2main_8c.html#ab49080905cfa7ef1e3e37a549609b884"}}{\fldrslt \cf5 rest_init}}(); \{{\field{\*\fldinst{HYPERLINK "applewebdata://077C3D4D-BAC4-490D-9A5A-42897CB8A5AB/kernel_2sched_8c.html#ae2b4fba441f12bdbac5148f66ec295bc"}}{\fldrslt \cf5 \ul \ulc5 init_idle_bootup_task}}({\field{\*\fldinst{HYPERLINK "applewebdata://077C3D4D-BAC4-490D-9A5A-42897CB8A5AB/arch_2alpha_2include_2asm_2current_8h.html#a7ccda8a3a0f47702f9fa962899b0a3a1"}}{\fldrslt \cf5 current}}); \{{\field{\*\fldinst{HYPERLINK "applewebdata://A75E12CC-79C9-4388-9839-7E476A60C166/arch_2frv_2kernel_2process_8c.html#a1c6dbd28a7f6041cab3bae469104b318"}}{\fldrslt \cf5 idle}}->sched_class = &{\field{\*\fldinst{HYPERLINK "applewebdata://A75E12CC-79C9-4388-9839-7E476A60C166/sched__idletask_8c.html#a1ae615914f2be1626c1af0dfe34a690c"}}{\fldrslt \cf5 idle_sched_class}};\}\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0 \cf0 \cb1 Ok, some facts:\
+- __run_hrtimer contains #ifndef __LINSCHED\
+- heres the rundown on one of the functions setting the event_handler\
+\
+1x-193-157-192-134:kernel steikr$ grep "tick_setup_oneshot" -rn *\
+time/tick-common.c:209:		tick_setup_oneshot(newdev, handler, next_event);\
+time/tick-internal.h:22:extern void tick_setup_oneshot(struct clock_event_device *newdev,\
+time/tick-internal.h:53:void tick_setup_oneshot(struct clock_event_device *newdev,\
+time/tick-oneshot.c:116: * tick_setup_oneshot - setup the event device for oneshot mode (hres or nohz)\
+time/tick-oneshot.c:118:void tick_setup_oneshot(struct clock_event_device *newdev,\
+\
+1x-193-157-192-134:kernel steikr$ grep "tick_setup_device" -rn *\
+time/tick-common.c:155:static void tick_setup_device(struct tick_device *td,\
+time/tick-common.c:279:	tick_setup_device(td, newdev, cpu, cpumask_of(cpu));\
+1x-193-157-192-134:kernel steikr$ \
+\
+\
+\
+\
+BEG:\
+Den som begynner i begynnelsen av 9 min er best til n\'e5..\
+\
+provarrlowq: etter pling bort bed intro: liker overtone, fortsette helt til akkorden som b\'f8r gj\'f8res klarer ved nedgang etterp\'e5. metallovertonene kan gj\'f8res der, gitaren kan faktisk v\'e6re s\'e5nn. alt m\'e5 bare gj\'f8res klarerer. siste grepet p\'e5 synth f\'f8r bridge, at gitaren holde tonen der, er en viktig god ting.siste tonene p\'e5 bridgegitaren b\'f8r gj\'f8res annerledes (de som er litt feil spillt). Kanskje g\'e5 opp til noe VEEELDIG passende der? Noe rart, kanskje? Eller motsatt, noe veldig passende? Men jeg liker den andre bridgen veldig godt ogs\'e5! Spesiellt den f\'f8rste delen av den. Og refrent, den feelingen vi har der av "city skyline type a'deal" er VIKTIG. Og, vel\'85 overgang til nytt parti litt treigt. Kanskje bare hoppe inn der? Rett p\'e5 gitar?!!! JAAAA!!!!!!\
+\
+- B\'f8re v\'e6re balengs, og mer og mer skrikende gitar, som br\'e5tt g\'e5r over i en veldig behagelig lyd.Vi er inne p\'e5 noe i den tredge oppgangen der!! Syns kanskje \
+}

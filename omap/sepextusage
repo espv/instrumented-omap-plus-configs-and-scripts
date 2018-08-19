@@ -1,0 +1,128 @@
+kernel/sched.c:2689:    trace_sepext_wakeup(__builtin_return_address(0), p);
+kernel/sched.c:3160:	trace_sepext_ctxswitch(prev, next);
+kernel/sched.c:4263:            // trace_sepext_dequeuerq(__builtin_return_address(0), prev, DEQUEUE_SLEEP);
+kernel/sched.c:4578:    trace_sepext_complete(__builtin_return_address(0), x, STATE_GLOBAL);
+kernel/sched.c:4601:    trace_sepext_complete_all(__builtin_return_address(0), x, STATE_GLOBAL);
+kernel/sched.c:4659:    trace_sepext_wait_for_completion(__builtin_return_address(0), x, STATE_GLOBAL);
+kernel/sched.c:4678:    trace_sepext_wait_for_completion_timeout(__builtin_return_address(0), x, timeout, STATE_GLOBAL);
+kernel/sched.c:4694:    trace_sepext_wait_for_completion_interruptible(__builtin_return_address(0), x, STATE_GLOBAL);
+kernel/sched.c:4716:    trace_sepext_wait_for_completion_interruptible_timeout(__builtin_return_address(0), x, timeout, STATE_GLOBAL);
+kernel/sched.c:4732:    trace_sepext_wait_for_completion_killable(__builtin_return_address(0), x, STATE_GLOBAL);
+kernel/sched.c:4755:    trace_sepext_wait_for_completion_killable_timeout(__builtin_return_address(0), x, timeout, STATE_GLOBAL);
+kernel/sched.c:4779:    trace_sepext_try_wait_for_completion(__builtin_return_address(0), x, STATE_GLOBAL);
+kernel/sched_fair.c:2058:    trace_sepext_migrate(this_cpu, p->pid);
+kernel/softirq.c:228:    trace_sepext_loopstart(max_restart, 0, SRVQ_HI_SOFTIRQ, SRVQ_HRTIMER_SOFTIRQ);
+kernel/softirq.c:230:	trace_sepext_looprestart(0);
+kernel/softirq.c:239:    trace_sepext_loopstart(1, 1, SRVQ_HI_SOFTIRQ, SRVQ_HRTIMER_SOFTIRQ);
+kernel/softirq.c:241:		trace_sepext_looprestart(0); // OYSTEDAL
+kernel/softirq.c:250:            trace_sepext_srvqueue(h->action, 0, 0, QUEUE_DEQUEUE);
+kernel/softirq.c:252:            trace_sepext_srvexit(h->action);
+kernel/softirq.c:272:	trace_sepext_loopstop(0);
+kernel/softirq.c:280:	trace_sepext_loopstop(0); 
+kernel/softirq.c:283:	// trace_sepext_queuecondition(pending == 0, SRVQ_HI_SOFTIRQ, SRVQ_HRTIMER_SOFTIRQ); 
+kernel/softirq.c:323:    trace_sepext_srventry(irq_enter); // OYSTEDAL
+kernel/softirq.c:383:    trace_sepext_srvexit(irq_enter); // OYSTEDAL
+kernel/softirq.c:393:    trace_sepext_srvqueue((void *) nr, SRVQ_HI_SOFTIRQ + nr, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:446:	// trace_sepext_srvqueue(tasklet_action, SRVQ_TASKLET_SOFTIRQ, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:447:	// trace_sepext_srvqueue(t->func, SRVQ_TASKLET, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:468:	// trace_sepext_srvqueue(tasklet_hi_action, SRVQ_HI_SOFTIRQ, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:469:	// trace_sepext_srvqueue(t->func, SRVQ_TASKLET_HI, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:487:    trace_sepext_srvqueue((void *) HI_SOFTIRQ, SRVQ_HI_SOFTIRQ + HI_SOFTIRQ, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:504:	trace_sepext_loopstart(-1, 0, SRVQ_TASKLET, SRVQ_TASKLET);
+kernel/softirq.c:508:        trace_sepext_looprestart(0); // OYSTEDAL
+kernel/softirq.c:519:				trace_sepext_srvqueue(t->func, 0, 0, QUEUE_DEQUEUE);
+kernel/softirq.c:524:				trace_sepext_srvexit(t->func);
+kernel/softirq.c:536:        trace_sepext_srvqueue((void *) TASKLET_SOFTIRQ, SRVQ_HI_SOFTIRQ + TASKLET_SOFTIRQ, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:542:    trace_sepext_loopstop(0);
+kernel/softirq.c:556:	trace_sepext_loopstart(-1, 0, SRVQ_TASKLET_HI, SRVQ_TASKLET_HI);
+kernel/softirq.c:559:        trace_sepext_looprestart(0);
+kernel/softirq.c:571:				trace_sepext_srvqueue(t->func, 0, 0, QUEUE_DEQUEUE);
+kernel/softirq.c:576:				trace_sepext_srvexit(t->func);
+kernel/softirq.c:588:        trace_sepext_srvqueue((void *) HI_SOFTIRQ, SRVQ_HI_SOFTIRQ + HI_SOFTIRQ, 0, QUEUE_ENQUEUE);
+kernel/softirq.c:594:    trace_sepext_loopstop(0);
+kernel/softirq.c:829:	trace_sepext_loopstart(-1, 0, SRVQ_HI_SOFTIRQ, SRVQ_HRTIMER_SOFTIRQ);
+kernel/softirq.c:832:        trace_sepext_looprestart(0);
+kernel/softirq.c:844:		trace_sepext_loopstart(-1, 0, SRVQ_HI_SOFTIRQ, SRVQ_HRTIMER_SOFTIRQ);
+kernel/softirq.c:847:            trace_sepext_looprestart(0);
+kernel/softirq.c:864:        trace_sepext_loopstop(0);
+kernel/softirq.c:871:    trace_sepext_loopstop(0);
+kernel/hrtimer.c:718:    trace_sepext_srvqueue((void *) HRTIMER_SOFTIRQ, SRVQ_HI_SOFTIRQ + HRTIMER_SOFTIRQ, 0, QUEUE_ENQUEUE);
+kernel/hrtimer.c:1001:            trace_sepext_srvqueue((void *) HRTIMER_SOFTIRQ, SRVQ_HI_SOFTIRQ + HRTIMER_SOFTIRQ, 0, QUEUE_ENQUEUE);
+kernel/semaphore.c:58:    trace_sepext_semaphore_down((void*)__builtin_return_address(0), sem, SYNCH_GLOBAL);
+kernel/semaphore.c:82:    trace_sepext_semaphore_down((void*)__builtin_return_address(0), sem, SYNCH_GLOBAL);
+kernel/semaphore.c:109:    trace_sepext_semaphore_down((void*)__builtin_return_address(0), sem, SYNCH_GLOBAL);
+kernel/semaphore.c:139:    trace_sepext_semaphore_down((void*)__builtin_return_address(0), sem, SYNCH_GLOBAL);
+kernel/semaphore.c:165:    trace_sepext_semaphore_down((void*)__builtin_return_address(0), sem, SYNCH_GLOBAL);
+kernel/semaphore.c:188:    trace_sepext_semaphore_up((void*)__builtin_return_address(0), sem, SYNCH_GLOBAL);
+kernel/irq/handle.c:131:        // trace_sepext_srvqueue(0, SRVQ_HIRQ, 0, QUEUE_DEQUEUE); // OYSTEDAL
+kernel/irq/handle.c:132:        trace_sepext_srvqueue(action->handler, SRVQ_HIRQ, 0, QUEUE_DEQUEUE); // OYSTEDAL
+kernel/irq/handle.c:133:        trace_sepext_hirqstart(irq); // OYSTEDAL
+kernel/irq/handle.c:135:        trace_sepext_hirqstop(irq); // OYSTEDAL
+kernel/irq/handle.c:136:        trace_sepext_srvexit(0); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_linux.c:1297:    // trace_sepext_srventry(dhd_start_xmit); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_linux.c:1377:    // trace_sepext_pktqueue(skb->data, PKTQ_NIC_TX, 0, QUEUE_ENQUEUE); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_linux.c:1388:    // trace_sepext_srvexit(dhd_start_xmit); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_linux.c:1442:    trace_sepext_srventry(dhd_rx_frame); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_linux.c:1569:        trace_sepext_pktextract((unsigned char *) skb, skb->truesize, 1);
+drivers/net/wireless/bcmdhd/dhd_linux.c:1595:    trace_sepext_srvexit(dhd_rx_frame); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_linux.c:1788:        trace_sepext_srventry(dhd_dpc_thread);
+drivers/net/wireless/bcmdhd/dhd_linux.c:1801:                trace_sepext_queuecondition(!condition, PKTQ_NIC, PKTQ_NIC);
+drivers/net/wireless/bcmdhd/dhd_linux.c:1819:        trace_sepext_srvexit(dhd_dpc_thread);
+drivers/net/wireless/bcmdhd/dhd_linux.c:1822:    trace_sepext_srvexit(dhd_dpc_thread);
+drivers/net/wireless/bcmdhd/dhd_linux.c:1833:    trace_sepext_srventry(dhd_dpc); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_linux.c:1852:    trace_sepext_srvexit(dhd_dpc);
+drivers/net/wireless/bcmdhd/dhd_common.c:552:	trace_sepext_pktqueue(((struct sk_buff *) pkt)->data, PKTQ_BCM4329_TXQ, 0, QUEUE_ENQUEUE);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1111:	trace_sepext_pktextract(pkt, 0, 2);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1115:	trace_sepext_pktqueue((void *) PKTDATA(osh, pkt), PKTQ_NIC, 0, QUEUE_ENQUEUE);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1215:		trace_sepext_queuecondition(pktq_len(&bus->txq) == 0, PKTQ_BCM4329_TXQ, PKTQ_BCM4329_TXQ);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1277:	trace_sepext_queuecondition(rxdone, PKTQ_NIC, PKTQ_NIC);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1282:	trace_sepext_loopstart(maxframes, 0, PKTQ_BCM4329_TXQ, PKTQ_BCM4329_TXQ);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1288:        trace_sepext_looprestart(0);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1296:		trace_sepext_pktqueue(((struct sk_buff *) pkt)->data, PKTQ_BCM4329_TXQ, 0, QUEUE_DEQUEUE);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:1325:    trace_sepext_loopstop(0);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3804:    trace_sepext_srventry(dhdsdio_readframes); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3821:    trace_sepext_pktextract((void *) 0, 0, 4);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3823:    // OYSTEDAL: trace_sepext_loopstart
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3824:	trace_sepext_loopstart(maxframes, 0, PKTQ_NIC, PKTQ_NIC);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3830:        trace_sepext_pktextract((void *) 0, 0, 0);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3833:        trace_sepext_looprestart(0);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3837:        trace_sepext_queuecondition(hastxpkts > 0, PKTQ_BCM4329_TXQ, PKTQ_BCM4329_TXQ);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:3870:        // trace_sepext_statecondition(STATE_SINGLE_READ, readSingle, 0, 0);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4323:		trace_sepext_pktqueue((void *) ((struct sk_buff*)(pkt))->data, PKTQ_NIC, 0, QUEUE_DEQUEUE);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4380:    trace_sepext_loopstop(0);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4395:    trace_sepext_srvexit(dhdsdio_readframes); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4678:	trace_sepext_queuecondition(pktq_mlen(&bus->txq, ~bus->flowcontrol) == 0, PKTQ_BCM4329_TXQ, PKTQ_BCM4329_TXQ);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4682:	// trace_sepext_statecondition(STATE_CTRL_AVAILABLE, TXCTLOK(bus), 0, 0);
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4802:    trace_sepext_srventry(dhdsdio_isr); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4809:        trace_sepext_srvexit(dhdsdio_isr); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4816:        trace_sepext_srvexit(dhdsdio_isr); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4829:        trace_sepext_srvexit(dhdsdio_isr); // OYSTEDAL
+drivers/net/wireless/bcmdhd/dhd_sdio.c:4853:    trace_sepext_srvexit(dhdsdio_isr); // OYSTEDAL
+net/ipv4/ip_output.c:219:            trace_sepext_srventry(neigh->output); // OYSTEDAL
+net/ipv4/ip_output.c:221:            trace_sepext_srvexit(neigh->output); // OYSTEDAL
+net/core/dev.c:2156:        trace_sepext_srventry((void*)ops->ndo_start_xmit);
+net/core/dev.c:2158:        trace_sepext_srvexit((void*)ops->ndo_start_xmit);
+net/core/dev.c:2514:    trace_sepext_srvqueue((void *) NET_RX_SOFTIRQ, SRVQ_HI_SOFTIRQ + NET_RX_SOFTIRQ, 0, QUEUE_ENQUEUE);
+net/core/dev.c:2805:        trace_sepext_srvqueue((void *) NET_RX_SOFTIRQ, SRVQ_HI_SOFTIRQ + NET_RX_SOFTIRQ, 0, QUEUE_ENQUEUE);
+net/core/dev.c:2830:	trace_sepext_pktqueue((void *) skb->data, PKTQ_IP_BACKLOG, 0, QUEUE_ENQUEUE);
+net/core/dev.c:2833:	trace_sepext_queuecondition(!(skb_queue_len(&sd->input_pkt_queue) > 0), PKTQ_IP_BACKLOG, PKTQ_IP_BACKLOG);
+net/core/dev.c:2928:	trace_sepext_queuecondition(!(local_softirq_pending()), SRVQ_HI_SOFTIRQ, SRVQ_HRTIMER_SOFTIRQ);
+net/core/dev.c:3232:        // trace_sepext_srventry(pt_prev->func);
+net/core/dev.c:3234:        trace_sepext_srventry(0);
+net/core/dev.c:3236:        trace_sepext_srvexit(0);
+net/core/dev.c:3237:        // trace_sepext_srvexit(pt_prev->func);
+net/core/dev.c:3687:        trace_sepext_loopstart(quota, 0, PKTQ_IP_BACKLOG, PKTQ_IP_BACKLOG);
+net/core/dev.c:3689:            trace_sepext_looprestart(0);
+net/core/dev.c:3693:                trace_sepext_pktqueue(skb->data, PKTQ_IP_BACKLOG, 0, QUEUE_DEQUEUE);
+net/core/dev.c:3705:                trace_sepext_loopstop(0);
+net/core/dev.c:3710:        trace_sepext_loopstop(0);
+net/core/dev.c:3914:    trace_sepext_srvqueue((void *) NET_RX_SOFTIRQ, SRVQ_HI_SOFTIRQ + NET_RX_SOFTIRQ, 0, QUEUE_ENQUEUE);
+net/core/pktgen.c:3438:        trace_sepext_srventry(pktgen_thread_worker);
+net/core/pktgen.c:3448:            trace_sepext_srvexit(pktgen_thread_worker);
+net/core/pktgen.c:3457:            trace_sepext_srventry(pktgen_xmit);
+net/core/pktgen.c:3459:            trace_sepext_srvexit(pktgen_xmit);
+net/core/pktgen.c:3491:        trace_sepext_srvexit(pktgen_thread_worker);
+net/core/pktgen.c:3493:    trace_sepext_srvexit(pktgen_thread_worker);
+include/linux/completion.h:62:extern void trace_sepext_tempsynch_helper(enum sem_synch_type type, void *variable);
+include/linux/completion.h:68:  trace_sepext_tempsynch_helper(ST_COMPLETION, &work);			\
+include/linux/completion.h:74:  trace_sepext_tempsynch_helper(ST_COMPLETION, &work);				\

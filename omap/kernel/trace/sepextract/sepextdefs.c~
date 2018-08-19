@@ -1,0 +1,213 @@
+#include <linux/module.h>
+#include <trace/sepextract.h>
+
+/* DEPRECATED: We distinguish between pkt and srv queues by their ID
+   being below (pkt) or above (srv) PKTQ_LAST. This cannot be
+   statically initialized, so we drop these strucutres all together. 
+   In stead, we have these structures in a separate file, and
+   trace characteristics with ID-address maping events.
+
+   NOT DEPRECATED AFTER ALL!: Because, how to trace queue
+   addresses if the traces is not activated! So instead
+   we merge the two ID lists and separate between the two
+   by means of the same as above. */
+
+/* The indexes are defined in sepestract.h.
+   NOTE: this is not really a nice way to do this,
+   as one needs to synchronize the two files.
+   Other schemes could be that protocols register
+   this upon initialization, or that the semextract
+   module does this, is it is anyway only to be
+   used in experiements. */
+struct sem_queue_struct sem_queues[MAX_QUEUES] =
+  {
+    {0,0,0, "noloc"}, /* Zero-index is NOLOC */
+    {QT_FIFO, 1000, 0, "ip:backlog"},
+    {QT_FIFO, 256, 0, "bcm4329:txq"},
+    {QT_FIFO, 0, 0, "nic:rxtx"}, /* For now: no limit, and no distinction between inbound and outbound queues. STEINTODO. */
+
+    /* Addresses set in arch/arm/mach-msm/dma.c:*/
+    {QT_FIFO, 0, 0, "dma:readycmd1"},
+    {QT_FIFO, 0, 0, "dma:readycmd2"},
+    {QT_FIFO, 0, 0, "dma:readycmd3"},
+    {QT_FIFO, 0, 0, "dma:readycmd4"},
+    {QT_FIFO, 0, 0, "dma:readycmd5"},
+    {QT_FIFO, 0, 0, "dma:readycmd6"},
+    {QT_FIFO, 0, 0, "dma:readycmd7"},
+    {QT_FIFO, 0, 0, "dma:readycmd8"},
+    {QT_FIFO, 0, 0, "dma:readycmd9"},
+    {QT_FIFO, 0, 0, "dma:readycmd10"},
+    {QT_FIFO, 0, 0, "dma:readycmd11"},
+    {QT_FIFO, 0, 0, "dma:readycmd12"},
+    {QT_FIFO, 0, 0, "dma:readycmd13"},
+    {QT_FIFO, 0, 0, "dma:readycmd14"},
+    {QT_FIFO, 0, 0, "dma:readycmd15"},
+    {QT_FIFO, 0, 0, "dma:readycmd16"},
+
+    {QT_FIFO, 0, 0, "kernel:qdisc"},
+
+    {0,0,0, "lastpktq"}, /* Just used for separation of service queues from packet queues */
+
+    /* Softirqs (queue size 1 = idempotent activation) */
+    {QT_FIFO,1,0, "softirq:hi"},
+    {QT_FIFO,1,0, "softirq:timer"},
+    {QT_FIFO,1,0, "softirq:tx"},
+    {QT_FIFO,1,0, "softirq:rx"},
+    {QT_FIFO,1,0, "softirq:block"},
+    {QT_FIFO,1,0, "softirq:block-iopoll"},
+    {QT_FIFO,1,0, "softirq:tasklet"},
+    {QT_FIFO,1,0, "softirq:sched"},
+    {QT_FIFO,1,0, "softirq:hrtimer"},
+
+    /* Tasklets (no queue limit) */
+    {QT_FIFO,0,0, "tasklet:scheduled"},
+    {QT_FIFO,0,0, "tasklet:scheduled-hi"},
+
+    /* High resolution timers (investigate, but I think no size. STEINTODO. ) */
+    {QT_FIFO,0,0, "hrtimer:scheduled"},
+
+    /* WL1251 Workqueue */
+    {QT_FIFO,0,0, "wl1251:hwwork"},
+  };
+
+EXPORT_SYMBOL(sem_queues);
+
+struct sem_synch sem_synchvars[MAX_SYNCH] =
+  {
+    {ST_COMPLETION, 0, "temporary:completion"},
+    {ST_SEMAPHORE, 0, "bcm4329:dpc"},
+    {ST_SEMAPHORE, 0, "wl12xx:mcspirx"},
+    {ST_SEMAPHORE, 0, "wl12xx:mcspitx"},
+  };
+
+EXPORT_SYMBOL(sem_synchvars);
+
+struct sem_state sem_statevars[MAX_STATE] =
+  {
+    {"kernel:workpending"},
+    /* Add state variables here */
+  };
+
+EXPORT_SYMBOL(sem_statevars);
+
+/* Trace definitions. Having them in a dedicated .c-file
+   ensures only one definition in the kernel. */
+/* 
+ * PIOTR
+ *  Kernel 2.6.28 does not separate trace definitions and 
+ *  declarations. 
+ */
+#if 0
+DEFINE_TRACE(sepext_srventry);
+DEFINE_TRACE(sepext_srvexit);
+DEFINE_TRACE(sepext_peustart);
+DEFINE_TRACE(sepext_peustop);
+DEFINE_TRACE(sepext_pktqueue);
+DEFINE_TRACE(sepext_srvqueue);
+DEFINE_TRACE(sepext_pktextr);
+DEFINE_TRACE(sepext_pktstart);
+DEFINE_TRACE(sepext_pktstop);
+DEFINE_TRACE(sepext_pktenq);
+DEFINE_TRACE(sepext_pktdeq);
+DEFINE_TRACE(sepext_srvenq);
+DEFINE_TRACE(sepext_srvdeq);
+DEFINE_TRACE(sepext_loopstart);
+DEFINE_TRACE(sepext_looprestart);
+DEFINE_TRACE(sepext_loopstop);
+DEFINE_TRACE(sepext_wakeup);
+DEFINE_TRACE(sepext_ctxswitch);
+DEFINE_TRACE(sepext_enqueuerq);
+DEFINE_TRACE(sepext_dequeuerq);
+DEFINE_TRACE(sepext_semaphore_up);
+DEFINE_TRACE(sepext_semaphore_down);
+DEFINE_TRACE(sepext_wait_for_completion);
+DEFINE_TRACE(sepext_wait_for_completion_timeout);
+DEFINE_TRACE(sepext_wait_for_completion_interruptible);
+DEFINE_TRACE(sepext_wait_for_completion_interruptible_timeout);
+DEFINE_TRACE(sepext_wait_for_completion_killable);
+DEFINE_TRACE(sepext_wait_for_completion_killable_timeout);
+DEFINE_TRACE(sepext_try_wait_for_completion);
+DEFINE_TRACE(sepext_complete);
+DEFINE_TRACE(sepext_complete_all);
+DEFINE_TRACE(sepext_hirqstart);
+DEFINE_TRACE(sepext_hirqstop);
+DEFINE_TRACE(sepext_softirqraise);
+DEFINE_TRACE(sepext_softirqstart);
+DEFINE_TRACE(sepext_softirqstop);
+DEFINE_TRACE(sepext_taskletstart);
+DEFINE_TRACE(sepext_taskletstop);
+DEFINE_TRACE(sepext_stacktrace);
+DEFINE_TRACE(sepext_debug);
+DEFINE_TRACE(sepext_queuecondition);
+DEFINE_TRACE(sepext_threadcondition);
+DEFINE_TRACE(sepext_statecondition);
+DEFINE_TRACE(sepext_pktextract);
+DEFINE_TRACE(sepext_conditionend);
+DEFINE_TRACE(sepext_tempsynch);
+*/
+/* Must export symbols for availability in modules */
+EXPORT_TRACEPOINT_SYMBOL(sepext_srventry);
+EXPORT_TRACEPOINT_SYMBOL(sepext_srvexit);
+EXPORT_TRACEPOINT_SYMBOL(sepext_peustart);
+EXPORT_TRACEPOINT_SYMBOL(sepext_peustop);
+EXPORT_TRACEPOINT_SYMBOL(sepext_pktqueue);
+EXPORT_TRACEPOINT_SYMBOL(sepext_srvqueue);
+EXPORT_TRACEPOINT_SYMBOL(sepext_pktextr);
+EXPORT_TRACEPOINT_SYMBOL(sepext_pktstart);
+EXPORT_TRACEPOINT_SYMBOL(sepext_pktstop);
+EXPORT_TRACEPOINT_SYMBOL(sepext_pktenq);
+EXPORT_TRACEPOINT_SYMBOL(sepext_pktdeq);
+EXPORT_TRACEPOINT_SYMBOL(sepext_srvenq);
+EXPORT_TRACEPOINT_SYMBOL(sepext_srvdeq);
+EXPORT_TRACEPOINT_SYMBOL(sepext_loopstart);
+EXPORT_TRACEPOINT_SYMBOL(sepext_looprestart);
+EXPORT_TRACEPOINT_SYMBOL(sepext_loopstop);
+EXPORT_TRACEPOINT_SYMBOL(sepext_wakeup);
+EXPORT_TRACEPOINT_SYMBOL(sepext_ctxswitch);
+EXPORT_TRACEPOINT_SYMBOL(sepext_enqueuerq);
+EXPORT_TRACEPOINT_SYMBOL(sepext_dequeuerq);
+EXPORT_TRACEPOINT_SYMBOL(sepext_semaphore_up);
+EXPORT_TRACEPOINT_SYMBOL(sepext_semaphore_down);
+EXPORT_TRACEPOINT_SYMBOL(sepext_wait_for_completion);
+EXPORT_TRACEPOINT_SYMBOL(sepext_wait_for_completion_timeout);
+EXPORT_TRACEPOINT_SYMBOL(sepext_wait_for_completion_interruptible);
+EXPORT_TRACEPOINT_SYMBOL(sepext_wait_for_completion_interruptible_timeout);
+EXPORT_TRACEPOINT_SYMBOL(sepext_wait_for_completion_killable);
+EXPORT_TRACEPOINT_SYMBOL(sepext_wait_for_completion_killable_timeout);
+EXPORT_TRACEPOINT_SYMBOL(sepext_try_wait_for_completion);
+EXPORT_TRACEPOINT_SYMBOL(sepext_complete);
+EXPORT_TRACEPOINT_SYMBOL(sepext_complete_all);
+EXPORT_TRACEPOINT_SYMBOL(sepext_hirqstart);
+EXPORT_TRACEPOINT_SYMBOL(sepext_hirqstop);
+EXPORT_TRACEPOINT_SYMBOL(sepext_softirqraise);
+EXPORT_TRACEPOINT_SYMBOL(sepext_softirqstart);
+EXPORT_TRACEPOINT_SYMBOL(sepext_softirqstop);
+EXPORT_TRACEPOINT_SYMBOL(sepext_taskletstart);
+EXPORT_TRACEPOINT_SYMBOL(sepext_taskletstop);
+EXPORT_TRACEPOINT_SYMBOL(sepext_stacktrace);
+EXPORT_TRACEPOINT_SYMBOL(sepext_debug);
+EXPORT_TRACEPOINT_SYMBOL(sepext_queuecondition);
+EXPORT_TRACEPOINT_SYMBOL(sepext_statecondition);
+EXPORT_TRACEPOINT_SYMBOL(sepext_pktextract);
+EXPORT_TRACEPOINT_SYMBOL(sepext_threadcondition);
+EXPORT_TRACEPOINT_SYMBOL(sepext_conditionend);
+EXPORT_TRACEPOINT_SYMBOL(sepext_tempsynch);
+#endif /* #if 0 */
+
+/* Helper for completions. Because completions are
+   used by tracepoints via rcupdate, adding a tracepoint
+   inside of completions would introduce a mutual
+   dependency, which yields a compilation problem. */
+
+void trace_sepext_tempsynch_helper(enum sem_synch_type type, void *variable)
+{
+  trace_sepext_tempsynch(__builtin_return_address(0), type, variable);
+}
+
+EXPORT_SYMBOL(trace_sepext_tempsynch_helper);
+
+void *sepext_get_address() {
+  return __builtin_return_address(0);
+}
+
+EXPORT_SYMBOL(sepext_get_address);

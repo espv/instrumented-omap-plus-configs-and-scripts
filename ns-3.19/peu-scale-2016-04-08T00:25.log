@@ -1,0 +1,42 @@
+count=1
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 54% cpu 0,029 total
+count=1
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 57% cpu 0,029 total
+count=1
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 56% cpu 0,027 total
+count=2
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 58% cpu 0,029 total
+count=2
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 54% cpu 0,029 total
+count=2
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 50% cpu 0,024 total
+count=4
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 42% cpu 0,030 total
+count=4
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 54% cpu 0,028 total
+count=4
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 49% cpu 0,027 total
+count=8
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 48% cpu 0,027 total
+count=8
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 48% cpu 0,027 total
+count=8
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 54% cpu 0,026 total
+count=32
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 51% cpu 0,025 total
+count=32
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 44% cpu 0,031 total
+count=32
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 56% cpu 0,025 total
+count=64
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 51% cpu 0,027 total
+count=64
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 55% cpu 0,023 total
+count=64
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 47% cpu 0,027 total
+count=128
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 50% cpu 0,024 total
+count=128
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 50% cpu 0,026 total
+count=128
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count=1   --rate="$rate"  0,01s user 0,00s system 41% cpu 0,034 total

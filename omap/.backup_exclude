@@ -1,0 +1,56 @@
+sim/**
+given/**
+public/**
+build/**
+
+**.git/**
+
+*.o
+*.o.cmd
+
+*.run.xml
+*. acn
+tikzuml-HEAD/**
+
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+
+*.dvi
+*-converted-to.*
+# these rules might exclude image files for figures etc.
+# *.ps
+# *.eps
+# *.pdf
+
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+*.gnuplot
+*.table
+
+*.sty.*

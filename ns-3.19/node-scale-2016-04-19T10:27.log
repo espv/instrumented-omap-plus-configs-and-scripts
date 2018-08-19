@@ -1,0 +1,36 @@
+count=1
+Event count: 73909151
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     360,12s user 0,00s system 99% cpu 6:01,30 total
+count=1
+Event count: 73909151
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     358,15s user 0,00s system 97% cpu 6:08,41 total
+count=1
+Event count: 73909151
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     371,43s user 0,00s system 94% cpu 6:31,60 total
+count=2
+Event count: 147818899
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     736,53s user 0,00s system 93% cpu 13:06,37 total
+count=2
+Event count: 147818899
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     755,40s user 0,00s system 84% cpu 14:55,16 total
+count=2
+Event count: 147818899
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     751,55s user 0,00s system 93% cpu 13:21,16 total
+count=3
+Event count: 221727038
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     1033,91s user 0,00s system 99% cpu 17:16,16 total
+count=3
+Event count: 221727038
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     1054,12s user 0,00s system 99% cpu 17:36,26 total
+count=3
+Event count: 221727038
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     1080,22s user 0,00s system 99% cpu 18:02,81 total
+count=5
+Event count: 369546573
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     1942,16s user 0,00s system 90% cpu 35:36,71 total
+count=5
+Event count: 369546573
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     1895,29s user 0,00s system 99% cpu 31:49,13 total
+count=5
+Event count: 369546573
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     2064,95s user 0,00s system 99% cpu 34:30,54 total

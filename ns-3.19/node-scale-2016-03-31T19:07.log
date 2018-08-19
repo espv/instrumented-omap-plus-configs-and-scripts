@@ -1,0 +1,7 @@
+count=50
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     388,36s user 2,35s system 92% cpu 7:04,35 total
+count=50
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     354,86s user 2,38s system 82% cpu 7:12,60 total
+count=50
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     445,60s user 2,57s system 97% cpu 7:40,93 total
+count=100

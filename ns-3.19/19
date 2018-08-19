@@ -1,0 +1,330 @@
+Generating packet 19
+0.0095s -1 DropTailQueue:DoEnqueue(0x237a470, 0x23afad0)
+0.0095s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number packets 1
+0.0095s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number bytes 100
+0.0095s -1 InterruptController:IssueInterruptWithServiceOnCPU(): [INFO ] Interrupt 162 on CPU0
+EXEC  cpu0 +9500000.0ns        0    1    0    0    10005147  	irq_enter                     				x                                PROCESS		1925 763
+EXEC  cpu0 +9502201.0ns        0    1    0    0    10007148  	irq_enter                     				handle_irq_event_percpu+3d0                      DEQUEUE		SRVQUEUE 0 HIRQ
+EXEC  cpu0 +9502201.0ns        0    1    0    0    1000979   		HIRQ-162                      			x                                PROCESS		2212 804
+EXEC  cpu0 +9503747.0ns        0    1    0    0    1001180   		HIRQ-162                      			dhdsdio_isr+36c                                  CALL		dhdsdio_isr
+EXEC  cpu0 +9503747.0ns        0    1    0    0    1001360   			dhdsdio_isr                   		x                                PROCESS		2596 1140
+EXEC  cpu0 +9505295.0ns        0    1    0    0    1001561   			dhdsdio_isr                   		dhd_sched_dpc+30                                 SEMUP		dhd_dpc_sem global
+0.0095053s -1 RoundRobinScheduler:DoSynchRequest(): [INFO ] semaphore_up
+EXEC  cpu0 +9505295.0ns        0    1    0    0    1001762   			dhdsdio_isr                   		x                                PROCESS		4739 2216
+EXEC  cpu0 +9508787.0ns        0    1    0    0    1001963   			dhdsdio_isr                   		0 STOP
+EXEC  cpu0 +9508787.0ns        0    1    0    0    1002181   		HIRQ-162                      			x                                PROCESS		400 80
+EXEC  cpu0 +9509081.0ns        0    1    0    0    1002382   		HIRQ-162                      			0 STOP
+EXEC  cpu0 +9509081.0ns        0    1    0    0    10025149  	irq_enter                     				x                                PROCESS		2154 859
+EXEC  cpu0 +9510930.0ns        0    1    0    0    10027150  	irq_enter                     				0 STOP
+0.00951093s -1 TaskScheduler:Terminate(): [INFO ] Terminating 0
+EXEC  cpu0 +9513755.0ns        3    0    0    0    10029344  			dhdsdio_readframes+29b0       		mmc_wait_for_req+4c                              TEMPSYNCH	-1 dhdsdio_readframes+29b0 1 HIRQ-91 global
+0.00951376s -1 RoundRobinScheduler:DoAllocateTempSynch(): [INFO ] Allocating tempsync
+Tempvar 0x23af320
+dhdsdio_readframes+29b0 
+HIRQ-91 
+EXEC  cpu0 +9513755.0ns        3    0    0    0    10031345  			dhdsdio_readframes+29b0       		x                                PROCESS		7227 1072
+EXEC  cpu0 +9519937.0ns        3    0    0    0    10033346  			dhdsdio_readframes+29b0       		omap_start_dma+380 PEUSTART HIRQ-91 1626 774
+EXEC  cpu0 +9519937.0ns        3    0    0    0    10035347  			dhdsdio_readframes+29b0       		mmc_wait_for_req+114                             WAITCOMPL	(TEMP) global
+Tempvar 0x23af320
+dhdsdio_readframes+29b0 
+HIRQ-91 
+dhdsdio_readframes+29b0
+0.00951994s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 3 -> 1
+0.00952051s -1 InterruptController:IssueInterruptWithServiceOnCPU(): [INFO ] Interrupt 91 on CPU0
+EXEC  cpu0 +9520511.0ns        0    1    0    0    10037147  	irq_enter                     				x                                PROCESS		1925 763
+EXEC  cpu0 +9522307.0ns        0    1    0    0    10039148  	irq_enter                     				handle_irq_event_percpu+3d0                      DEQUEUE		SRVQUEUE 0 HIRQ
+EXEC  cpu0 +9522307.0ns        0    1    0    0    10041112  		HIRQ-91                       			x                                PROCESS		1232 340
+EXEC  cpu0 +9523995.0ns        0    1    0    0    10043113  		HIRQ-91                       			mmc_wait_done+1c                                 COMPL	(TEMP) global
+Tempvar 0x23af320
+HIRQ-91 
+HIRQ-91
+0.009524s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 1 -> 3
+0.009524s -1 RoundRobinScheduler:DoDeallocateTempSynch(): [INFO ] Deallocating tempsync
+EXEC  cpu0 +9523995.0ns        0    1    0    0    10045114  		HIRQ-91                       			x                                PROCESS		631 191
+EXEC  cpu0 +9524544.0ns        0    1    0    0    10047116  		HIRQ-91                       			x                                PROCESS		4113 953
+EXEC  cpu0 +9527618.0ns        0    1    0    0    10049117  		HIRQ-91                       			0 STOP
+EXEC  cpu0 +9527618.0ns        0    1    0    0    10051149  	irq_enter                     				x                                PROCESS		2154 859
+EXEC  cpu0 +9530289.0ns        0    1    0    0    10053150  	irq_enter                     				0 STOP
+0.00953029s -1 TaskScheduler:Terminate(): [INFO ] Terminating 0
+EXEC  cpu0 +9530289.0ns        3    0    0    0    10055348  			dhdsdio_readframes+29b0       		x                                PROCESS		534 45
+EXEC  cpu0 +9530735.0ns        3    0    0    0    10057349  			dhdsdio_readframes+29b0       		x                                PROCESS		27800 1921
+EXEC  cpu0 +9554920.0ns        3    0    0    0    10059350  			dhdsdio_readframes+29b0       		0 RESTART
+EXEC  cpu0 +9554920.0ns        3    0    0    0    10061365  		dhdsdio_readframes            			x                                PROCESS		307 60
+EXEC  cpu0 +9555159.0ns        3    0    0    0    10063366  		dhdsdio_readframes            			0 STOP
+EXEC  cpu0 +9555159.0ns        3    0    0    0    10065-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9570040.0ns        3    0    0    0    10067440  	dhd_dpc_thread                				dhd_bus_dpc+106c                                 QUEUECOND	bcm4329::driver::tx bcm4329::driver::tx empty
+EXEC  cpu0 +9570040.0ns        3    0    0    0    10069441  	dhd_dpc_thread                				x                                PROCESS		816 392
+EXEC  cpu0 +9570799.0ns        3    0    0    0    10071443  	dhd_dpc_thread                				x                                PROCESS		666 215
+EXEC  cpu0 +9571243.0ns        3    0    0    0    10073444  	dhd_dpc_thread                				dhd_dpc_thread+2f0                               QUEUECOND	nic::rx nic::rx notempty
+EXEC  cpu0 +9571243.0ns        3    0    0    0    10075445  	dhd_dpc_thread                				x                                PROCESS		322 170
+EXEC  cpu0 +9571409.0ns        3    0    0    0    10077446  	dhd_dpc_thread                				dhd_dpc_thread+138                               SEMUP		dhd_dpc_sem global
+0.00957141s -1 RoundRobinScheduler:DoSynchRequest(): [INFO ] semaphore_up
+EXEC  cpu0 +9571409.0ns        3    0    0    0    10079447  	dhd_dpc_thread                				x                                PROCESS		441 63
+EXEC  cpu0 +9571812.0ns        3    0    0    0    10081448  	dhd_dpc_thread                				0 STOP
+EXEC  cpu0 +9571812.0ns        3    0    0    0    10083-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9572208.0ns        3    0    0    0    10085422  	dhd_dpc_thread                				dhd_dpc_thread+dc                                SEMDOWN		dhd_dpc_sem global
+0.00957221s -1 RoundRobinScheduler:DoSynchRequest(): [INFO ] semaphore_down
+0.00957221s -1 RoundRobinScheduler:DoSynchRequest(): [INFO ] Past semaphore
+EXEC  cpu0 +9572208.0ns        3    0    0    0    10087-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9576233.0ns        3    0    0    0    10089-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9580467.0ns        3    0    0    0    10091426  	dhd_dpc_thread                				mmc_wait_for_req+4c                              TEMPSYNCH	-1 dhd_dpc_thread 1 HIRQ-91 global
+0.00958047s -1 RoundRobinScheduler:DoAllocateTempSynch(): [INFO ] Allocating tempsync
+Tempvar 0x23af320
+dhd_dpc_thread 
+HIRQ-91 
+EXEC  cpu0 +9580467.0ns        3    0    0    0    10093-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9589603.0ns        3    0    0    0    10095-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9589603.0ns        3    0    0    0    10097-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9590675.0ns        3    0    0    0    10099430  	dhd_dpc_thread                				mmc_wait_for_req+114                             WAITCOMPL	(TEMP) global
+Tempvar 0x23af320
+dhd_dpc_thread 
+HIRQ-91 
+dhd_dpc_thread
+0.00959067s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 3 -> 1
+0.00959886s -1 InterruptController:IssueInterruptWithServiceOnCPU(): [INFO ] Interrupt 91 on CPU0
+EXEC  cpu0 +9598863.0ns        0    1    0    0    10101147  	irq_enter                     				x                                PROCESS		1925 763
+EXEC  cpu0 +9600978.0ns        0    1    0    0    10103148  	irq_enter                     				handle_irq_event_percpu+3d0                      DEQUEUE		SRVQUEUE 0 HIRQ
+EXEC  cpu0 +9600978.0ns        0    1    0    0    10105112  		HIRQ-91                       			x                                PROCESS		1232 340
+EXEC  cpu0 +9601681.0ns        0    1    0    0    10107113  		HIRQ-91                       			mmc_wait_done+1c                                 COMPL	(TEMP) global
+Tempvar 0x23af320
+HIRQ-91 
+HIRQ-91
+0.00960168s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 1 -> 3
+0.00960168s -1 RoundRobinScheduler:DoDeallocateTempSynch(): [INFO ] Deallocating tempsync
+EXEC  cpu0 +9601681.0ns        0    1    0    0    10109114  		HIRQ-91                       			x                                PROCESS		631 191
+EXEC  cpu0 +9601912.0ns        0    1    0    0    10111116  		HIRQ-91                       			x                                PROCESS		4113 953
+EXEC  cpu0 +9604944.0ns        0    1    0    0    10113117  		HIRQ-91                       			0 STOP
+EXEC  cpu0 +9604944.0ns        0    1    0    0    10115149  	irq_enter                     				x                                PROCESS		2154 859
+EXEC  cpu0 +9605991.0ns        0    1    0    0    10117150  	irq_enter                     				0 STOP
+0.00960599s -1 TaskScheduler:Terminate(): [INFO ] Terminating 0
+EXEC  cpu0 +9605991.0ns        3    0    0    0    10119-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9627442.0ns        3    0    0    0    10121432  	dhd_dpc_thread                				mmc_wait_for_req+4c                              TEMPSYNCH	-1 dhd_dpc_thread 1 HIRQ-91 global
+0.00962744s -1 RoundRobinScheduler:DoAllocateTempSynch(): [INFO ] Allocating tempsync
+Tempvar 0x23af320
+dhd_dpc_thread 
+HIRQ-91 
+EXEC  cpu0 +9627442.0ns        3    0    0    0    10123-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9634153.0ns        3    0    0    0    10125-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9634153.0ns        3    0    0    0    10127-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9634932.0ns        3    0    0    0    10129436  	dhd_dpc_thread                				mmc_wait_for_req+114                             WAITCOMPL	(TEMP) global
+Tempvar 0x23af320
+dhd_dpc_thread 
+HIRQ-91 
+dhd_dpc_thread
+0.00963493s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 3 -> 1
+0.00964425s -1 InterruptController:IssueInterruptWithServiceOnCPU(): [INFO ] Interrupt 91 on CPU0
+EXEC  cpu0 +9644250.0ns        0    1    0    0    10131147  	irq_enter                     				x                                PROCESS		1925 763
+EXEC  cpu0 +9646190.0ns        0    1    0    0    10133148  	irq_enter                     				handle_irq_event_percpu+3d0                      DEQUEUE		SRVQUEUE 0 HIRQ
+EXEC  cpu0 +9646190.0ns        0    1    0    0    10135112  		HIRQ-91                       			x                                PROCESS		1232 340
+EXEC  cpu0 +9646980.0ns        0    1    0    0    10137113  		HIRQ-91                       			mmc_wait_done+1c                                 COMPL	(TEMP) global
+Tempvar 0x23af320
+HIRQ-91 
+HIRQ-91
+0.00964698s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 1 -> 3
+0.00964698s -1 RoundRobinScheduler:DoDeallocateTempSynch(): [INFO ] Deallocating tempsync
+EXEC  cpu0 +9646980.0ns        0    1    0    0    10139114  		HIRQ-91                       			x                                PROCESS		631 191
+EXEC  cpu0 +9647742.0ns        0    1    0    0    10141116  		HIRQ-91                       			x                                PROCESS		4113 953
+EXEC  cpu0 +9650346.0ns        0    1    0    0    10143117  		HIRQ-91                       			0 STOP
+EXEC  cpu0 +9650346.0ns        0    1    0    0    10145149  	irq_enter                     				x                                PROCESS		2154 859
+EXEC  cpu0 +9652404.0ns        0    1    0    0    10147150  	irq_enter                     				0 STOP
+0.0096524s -1 TaskScheduler:Terminate(): [INFO ] Terminating 0
+EXEC  cpu0 +9652404.0ns        3    0    0    0    10149-1   	dhd_dpc_thread                				
+EXEC  cpu0 +9670145.0ns        3    0    0    0    10151438  	dhd_dpc_thread                				dhdsdio_readframes+2c1c                          CALL		dhdsdio_readframes
+EXEC  cpu0 +9670145.0ns        3    0    0    0    10153361  		dhdsdio_readframes            			x                                PROCESS		397 107
+EXEC  cpu0 +9670421.0ns        3    0    0    0    10155364  		dhdsdio_readframes            			dhdsdio_readframes+29b0                          LOOP		dhdsdio_readframes+29b0 0 bcm4329::driver::tx nic::rx 50
+EXEC  cpu0 +9670421.0ns        3    0    0    0    10157341  			dhdsdio_readframes+29b0       		x                                PROCESS		370 52
+EXEC  cpu0 +9670692.0ns        3    0    0    0    10159342  			dhdsdio_readframes+29b0       		dhdsdio_sendfromq+4c8                            LOOP		dhdsdio_sendfromq+4c8 0 bcm4329::driver::tx bcm4329::driver::tx 20
+EXEC  cpu0 +9670692.0ns        3    0    0    0    10161305  				dhdsdio_sendfromq+4c8         	x                                PROCESS		725 210
+EXEC  cpu0 +9671357.0ns        3    0    0    0    10163306  				dhdsdio_sendfromq+4c8         	0 RESTART
+EXEC  cpu0 +9671357.0ns        3    0    0    0    10165343  			dhdsdio_readframes+29b0       		x                                PROCESS		4185 400
+EXEC  cpu0 +9674813.0ns        3    0    0    0    10167344  			dhdsdio_readframes+29b0       		mmc_wait_for_req+4c                              TEMPSYNCH	-1 dhdsdio_readframes+29b0 1 HIRQ-91 global
+0.00967481s -1 RoundRobinScheduler:DoAllocateTempSynch(): [INFO ] Allocating tempsync
+Tempvar 0x23aeef0
+dhdsdio_readframes+29b0 
+HIRQ-91 
+EXEC  cpu0 +9674813.0ns        3    0    0    0    10169345  			dhdsdio_readframes+29b0       		x                                PROCESS		7227 1072
+EXEC  cpu0 +9680438.0ns        3    0    0    0    10171346  			dhdsdio_readframes+29b0       		omap_start_dma+380 PEUSTART HIRQ-91 1626 774
+EXEC  cpu0 +9680438.0ns        3    0    0    0    10173347  			dhdsdio_readframes+29b0       		mmc_wait_for_req+114                             WAITCOMPL	(TEMP) global
+Tempvar 0x23aeef0
+dhdsdio_readframes+29b0 
+HIRQ-91 
+dhdsdio_readframes+29b0
+0.00968044s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 3 -> 1
+0.00968124s -1 InterruptController:IssueInterruptWithServiceOnCPU(): [INFO ] Interrupt 91 on CPU0
+EXEC  cpu0 +9681240.0ns        0    1    0    0    10175147  	irq_enter                     				x                                PROCESS		1925 763
+EXEC  cpu0 +9683735.0ns        0    1    0    0    10177148  	irq_enter                     				handle_irq_event_percpu+3d0                      DEQUEUE		SRVQUEUE 0 HIRQ
+EXEC  cpu0 +9683735.0ns        0    1    0    0    10179112  		HIRQ-91                       			x                                PROCESS		1232 340
+EXEC  cpu0 +9684677.0ns        0    1    0    0    10181113  		HIRQ-91                       			mmc_wait_done+1c                                 COMPL	(TEMP) global
+Tempvar 0x23aeef0
+HIRQ-91 
+HIRQ-91
+0.00968468s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 1 -> 3
+0.00968468s -1 RoundRobinScheduler:DoDeallocateTempSynch(): [INFO ] Deallocating tempsync
+EXEC  cpu0 +9684677.0ns        0    1    0    0    10183114  		HIRQ-91                       			x                                PROCESS		631 191
+EXEC  cpu0 +9685163.0ns        0    1    0    0    10185116  		HIRQ-91                       			x                                PROCESS		4113 953
+EXEC  cpu0 +9690154.0ns        0    1    0    0    10187117  		HIRQ-91                       			0 STOP
+EXEC  cpu0 +9690154.0ns        0    1    0    0    10189149  	irq_enter                     				x                                PROCESS		2154 859
+EXEC  cpu0 +9690712.0ns        0    1    0    0    10191150  	irq_enter                     				0 STOP
+0.00969071s -1 TaskScheduler:Terminate(): [INFO ] Terminating 0
+EXEC  cpu0 +9690712.0ns        3    0    0    0    10193348  			dhdsdio_readframes+29b0       		x                                PROCESS		534 45
+EXEC  cpu0 +9691070.0ns        3    0    0    0    10195349  			dhdsdio_readframes+29b0       		x                                PROCESS		27800 1921
+EXEC  cpu0 +9711980.0ns        3    0    0    0    10197350  			dhdsdio_readframes+29b0       		0 RESTART
+EXEC  cpu0 +9711980.0ns        3    0    0    0    10199319  			dhdsdio_readframes+29b0       		x                                PROCESS		370 52
+EXEC  cpu0 +9712245.0ns        3    0    0    0    10201320  			dhdsdio_readframes+29b0       		dhdsdio_sendfromq+4c8                            LOOP		dhdsdio_sendfromq+4c8 0 bcm4329::driver::tx bcm4329::driver::tx 20
+EXEC  cpu0 +9712245.0ns        3    0    0    0    10203305  				dhdsdio_sendfromq+4c8         	x                                PROCESS		725 210
+EXEC  cpu0 +9712879.0ns        3    0    0    0    10205306  				dhdsdio_sendfromq+4c8         	0 RESTART
+EXEC  cpu0 +9712879.0ns        3    0    0    0    10207321  			dhdsdio_readframes+29b0       		x                                PROCESS		4185 400
+EXEC  cpu0 +9717232.0ns        3    0    0    0    10209322  			dhdsdio_readframes+29b0       		dhdsdio_readframes+22e4                          DEQUEUE		PKTQUEUE 0 nic::rx
+0.00971723s -1 DropTailQueue:DoDequeue(0x237a470)
+0.00971723s -1 DropTailQueue:DoDequeue(): [LOGIC] Popped 0x23afad0
+0.00971723s -1 DropTailQueue:DoDequeue(): [LOGIC] Number packets 0
+0.00971723s -1 DropTailQueue:DoDequeue(): [LOGIC] Number bytes 0
++9717232.0ns: Driver receives packet 19
+EXEC  cpu0 +9717232.0ns        3    0    0    0    10211324  			dhdsdio_readframes+29b0       		mmc_wait_for_req+4c                              TEMPSYNCH	-1 dhdsdio_readframes+29b0 1 HIRQ-91 global
+0.00971723s -1 RoundRobinScheduler:DoAllocateTempSynch(): [INFO ] Allocating tempsync
+Tempvar 0x2379510
+dhdsdio_readframes+29b0 
+HIRQ-91 
+EXEC  cpu0 +9717232.0ns        3    0    0    0    10213325  			dhdsdio_readframes+29b0       		x                                PROCESS		7227 1072
+EXEC  cpu0 +9722338.0ns        3    0    0    0    10215326  			dhdsdio_readframes+29b0       		omap_start_dma+380 PEUSTART HIRQ-91 1626 774
+EXEC  cpu0 +9722338.0ns        3    0    0    0    10217327  			dhdsdio_readframes+29b0       		mmc_wait_for_req+114                             WAITCOMPL	(TEMP) global
+Tempvar 0x2379510
+dhdsdio_readframes+29b0 
+HIRQ-91 
+dhdsdio_readframes+29b0
+0.00972234s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 3 -> 1
+0.00972364s -1 InterruptController:IssueInterruptWithServiceOnCPU(): [INFO ] Interrupt 91 on CPU0
+EXEC  cpu0 +9723644.0ns        0    1    0    0    10219147  	irq_enter                     				x                                PROCESS		1925 763
+EXEC  cpu0 +9724990.0ns        0    1    0    0    10221148  	irq_enter                     				handle_irq_event_percpu+3d0                      DEQUEUE		SRVQUEUE 0 HIRQ
+EXEC  cpu0 +9724990.0ns        0    1    0    0    10223112  		HIRQ-91                       			x                                PROCESS		1232 340
+EXEC  cpu0 +9726269.0ns        0    1    0    0    10225113  		HIRQ-91                       			mmc_wait_done+1c                                 COMPL	(TEMP) global
+Tempvar 0x2379510
+HIRQ-91 
+HIRQ-91
+0.00972627s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 1 -> 3
+0.00972627s -1 RoundRobinScheduler:DoDeallocateTempSynch(): [INFO ] Deallocating tempsync
+EXEC  cpu0 +9726269.0ns        0    1    0    0    10227114  		HIRQ-91                       			x                                PROCESS		631 191
+EXEC  cpu0 +9727286.0ns        0    1    0    0    10229116  		HIRQ-91                       			x                                PROCESS		4113 953
+EXEC  cpu0 +9731777.0ns        0    1    0    0    10231117  		HIRQ-91                       			0 STOP
+EXEC  cpu0 +9731777.0ns        0    1    0    0    10233149  	irq_enter                     				x                                PROCESS		2154 859
+EXEC  cpu0 +9734492.0ns        0    1    0    0    10235150  	irq_enter                     				0 STOP
+0.00973449s -1 TaskScheduler:Terminate(): [INFO ] Terminating 0
+EXEC  cpu0 +9734492.0ns        3    0    0    0    10237328  			dhdsdio_readframes+29b0       		x                                PROCESS		534 45
+EXEC  cpu0 +9734964.0ns        3    0    0    0    10239329  			dhdsdio_readframes+29b0       		dhd_rx_frame+414                                 CALL		dhd_rx_frame
+EXEC  cpu0 +9734964.0ns        3    0    0    0    10241261  				dhd_rx_frame                  	x                                PROCESS		1691 456
+EXEC  cpu0 +9736960.0ns        3    0    0    0    10243262  				dhd_rx_frame                  	enqueue_to_backlog+358                           ENQUEUE		PKTQUEUE 0 ip::backlog
+0.00973696s -1 DropTailQueue:DoEnqueue(0x2379cf0, 0x23afad0)
+0.00973696s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number packets 1
+0.00973696s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number bytes 100
+EXEC  cpu0 +9736960.0ns        3    0    0    0    10245263  				dhd_rx_frame                  	x                                PROCESS		296 25
+EXEC  cpu0 +9737206.0ns        3    0    0    0    10247264  				dhd_rx_frame                  	enqueue_to_backlog+2cc                           QUEUECOND	ip::backlog ip::backlog empty
+EXEC  cpu0 +9737206.0ns        3    0    0    0    10249265  				dhd_rx_frame                  	x                                PROCESS		368 30
+EXEC  cpu0 +9737568.0ns        3    0    0    0    10251266  				dhd_rx_frame                  	enqueue_to_backlog+3d0                           ENQUEUE		SRVQUEUE net_rx_action softirq::rx
+EXEC  cpu0 +9737568.0ns        3    0    0    0    10253267  				dhd_rx_frame                  	x                                PROCESS		477 29
+EXEC  cpu0 +9737996.0ns        3    0    0    0    10255268  				dhd_rx_frame                  	netif_rx_ni+cc                                   QUEUECOND	softirq::hi softirq::hrtimer notempty
+EXEC  cpu0 +9737996.0ns        3    0    0    0    10257269  				dhd_rx_frame                  	x                                PROCESS		454 70
+EXEC  cpu0 +9738448.0ns        3    0    0    0    10259270  				dhd_rx_frame                  	__do_softirq+660                                 LOOP		__do_softirq+660 0 softirq::hi softirq::hrtimer 10
+EXEC  cpu0 +9738448.0ns        3    0    0    0    10261246  					__do_softirq+660              x                                PROCESS		1033 1465
+EXEC  cpu0 +9738448.0ns        3    0    0    0    10263247  					__do_softirq+660              __do_softirq+4a8                                 LOOP		__do_softirq+4a8 1 softirq::hi softirq::hrtimer 1
+EXEC  cpu0 +9738448.0ns        3    0    0    0    10265234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9738606.0ns        3    0    0    0    10267235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9738606.0ns        3    0    0    0    10269234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9738734.0ns        3    0    0    0    10271235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9738734.0ns        3    0    0    0    10273234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9738928.0ns        3    0    0    0    10275235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9738928.0ns        3    0    0    0    10277220  						__do_softirq+4a8              x                                PROCESS		249 28
+EXEC  cpu0 +9739138.0ns        3    0    0    0    10279221  						__do_softirq+4a8              __do_softirq+354                                 DEQUEUE		SRVQUEUE 0 0
+EXEC  cpu0 +9739138.0ns        3    0    0    0    10281204  							net_rx_action                 x                                PROCESS		505 105
+EXEC  cpu0 +9739579.0ns        3    0    0    0    10283205  							net_rx_action                 process_backlog+368                              LOOP		process_backlog+368 0 ip::backlog ip::backlog 64
+EXEC  cpu0 +9739579.0ns        3    0    0    0    10285188  								process_backlog+368           x                                PROCESS		237 16
+EXEC  cpu0 +9739756.0ns        3    0    0    0    10287189  								process_backlog+368           process_backlog+2d8                              DEQUEUE		PKTQUEUE 0 ip::backlog
+0.00973976s -1 DropTailQueue:DoDequeue(0x2379cf0)
+0.00973976s -1 DropTailQueue:DoDequeue(): [LOGIC] Popped 0x23afad0
+0.00973976s -1 DropTailQueue:DoDequeue(): [LOGIC] Number packets 0
+0.00973976s -1 DropTailQueue:DoDequeue(): [LOGIC] Number bytes 0
+EXEC  cpu0 +9739756.0ns        3    0    0    0    10289190  								process_backlog+368           x                                PROCESS		789 127
+EXEC  cpu0 +9740226.0ns        3    0    0    0    10291191  								process_backlog+368           __netif_receive_skb+698                          CALL		0
++9740226.0ns: IP receives packet 19
+EXEC  cpu0 +9740226.0ns        3    0    0    0    10293161  									ip_rcv                        x                                PROCESS		2468 745
+EXEC  cpu0 +9742629.0ns        3    0    0    0    10295162  									ip_rcv                        dhd_prec_enq+180                                 ENQUEUE		PKTQUEUE 0 bcm4329::driver::tx
+0.00974263s -1 DropTailQueue:DoEnqueue(0x237a2a0, 0x23afad0)
+0.00974263s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number packets 1
+0.00974263s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number bytes 100
+EXEC  cpu0 +9742629.0ns        3    0    0    0    10297163  									ip_rcv                        x                                PROCESS		869 302
+EXEC  cpu0 +9743832.0ns        3    0    0    0    10299165  									ip_rcv                        x                                PROCESS		4120 1311
+EXEC  cpu0 +9745881.0ns        3    0    0    0    10301166  									ip_rcv                        0 STOP
+EXEC  cpu0 +9745881.0ns        3    0    0    0    10303192  								process_backlog+368           x                                PROCESS		467 67
+EXEC  cpu0 +9746278.0ns        3    0    0    0    10305193  								process_backlog+368           0 RESTART
+EXEC  cpu0 +9746278.0ns        3    0    0    0    10307177  								process_backlog+368           x                                PROCESS		229 22
+EXEC  cpu0 +9746465.0ns        3    0    0    0    10309178  								process_backlog+368           0 RESTART
+EXEC  cpu0 +9746465.0ns        3    0    0    0    10311206  							net_rx_action                 x                                PROCESS		407 27
+EXEC  cpu0 +9746782.0ns        3    0    0    0    10313207  							net_rx_action                 process_backlog+368                              LOOP		process_backlog+368 0 ip::backlog ip::backlog 1
+EXEC  cpu0 +9746782.0ns        3    0    0    0    10315177  								process_backlog+368           x                                PROCESS		229 22
+EXEC  cpu0 +9746981.0ns        3    0    0    0    10317178  								process_backlog+368           0 RESTART
+EXEC  cpu0 +9746981.0ns        3    0    0    0    10319208  							net_rx_action                 x                                PROCESS		621 129
+EXEC  cpu0 +9747374.0ns        3    0    0    0    10321209  							net_rx_action                 0 STOP
+EXEC  cpu0 +9747374.0ns        3    0    0    0    10323222  						__do_softirq+4a8              x                                PROCESS		378 79
+EXEC  cpu0 +9747672.0ns        3    0    0    0    10325223  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9747672.0ns        3    0    0    0    10327234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9747816.0ns        3    0    0    0    10329235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9747816.0ns        3    0    0    0    10331234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9747975.0ns        3    0    0    0    10333235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9747975.0ns        3    0    0    0    10335234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9748136.0ns        3    0    0    0    10337235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9748136.0ns        3    0    0    0    10339234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9748349.0ns        3    0    0    0    10341235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9748349.0ns        3    0    0    0    10343234  						__do_softirq+4a8              x                                PROCESS		191 37
+EXEC  cpu0 +9748500.0ns        3    0    0    0    10345235  						__do_softirq+4a8              0 RESTART
+EXEC  cpu0 +9748500.0ns        3    0    0    0    10347248  					__do_softirq+660              x                                PROCESS		270 18
+EXEC  cpu0 +9748711.0ns        3    0    0    0    10349249  					__do_softirq+660              0 RESTART
+EXEC  cpu0 +9748711.0ns        3    0    0    0    10351271  				dhd_rx_frame                  	x                                PROCESS		953 77
+EXEC  cpu0 +9749623.0ns        3    0    0    0    10353272  				dhd_rx_frame                  	0 STOP
+EXEC  cpu0 +9749623.0ns        3    0    0    0    10355330  			dhdsdio_readframes+29b0       		x                                PROCESS		27800 1921
+EXEC  cpu0 +9776528.0ns        3    0    0    0    10357331  			dhdsdio_readframes+29b0       		0 RESTART
+EXEC  cpu0 +9776528.0ns        3    0    0    0    10359341  			dhdsdio_readframes+29b0       		x                                PROCESS		370 52
+EXEC  cpu0 +9776874.0ns        3    0    0    0    10361342  			dhdsdio_readframes+29b0       		dhdsdio_sendfromq+4c8                            LOOP		dhdsdio_sendfromq+4c8 0 bcm4329::driver::tx bcm4329::driver::tx 20
+EXEC  cpu0 +9776874.0ns        3    0    0    0    10363283  				dhdsdio_sendfromq+4c8         	x                                PROCESS		589 216
+EXEC  cpu0 +9777414.0ns        3    0    0    0    10365284  				dhdsdio_sendfromq+4c8         	dhdsdio_sendfromq+3bc                            DEQUEUE		PKTQUEUE 0 bcm4329::driver::tx
+0.00977741s -1 DropTailQueue:DoDequeue(0x237a2a0)
+0.00977741s -1 DropTailQueue:DoDequeue(): [LOGIC] Popped 0x23afad0
+0.00977741s -1 DropTailQueue:DoDequeue(): [LOGIC] Number packets 0
+0.00977741s -1 DropTailQueue:DoDequeue(): [LOGIC] Number bytes 0
++9777414.0ns: Driver transmits packet 19
+EXEC  cpu0 +9777414.0ns        3    0    0    0    10367285  				dhdsdio_sendfromq+4c8         	x                                PROCESS		4608 591
+EXEC  cpu0 +9780428.0ns        3    0    0    0    10369286  				dhdsdio_sendfromq+4c8         	mmc_wait_for_req+4c                              TEMPSYNCH	-1 dhdsdio_sendfromq+4c8 1 HIRQ-91 global
+0.00978043s -1 RoundRobinScheduler:DoAllocateTempSynch(): [INFO ] Allocating tempsync
+Tempvar 0x2379510
+dhdsdio_sendfromq+4c8 
+HIRQ-91 
+EXEC  cpu0 +9780428.0ns        3    0    0    0    10371287  				dhdsdio_sendfromq+4c8         	x                                PROCESS		8632 1204
+EXEC  cpu0 +9787554.0ns        3    0    0    0    10373288  				dhdsdio_sendfromq+4c8         	omap_start_dma+380 PEUSTART HIRQ-91 14962 1790
+EXEC  cpu0 +9787554.0ns        3    0    0    0    10375289  				dhdsdio_sendfromq+4c8         	x                                PROCESS		766 357
+EXEC  cpu0 +9788294.0ns        3    0    0    0    10377290  				dhdsdio_sendfromq+4c8         	mmc_wait_for_req+114                             WAITCOMPL	(TEMP) global
+Tempvar 0x2379510
+dhdsdio_sendfromq+4c8 
+HIRQ-91 
+dhdsdio_sendfromq+4c8
+0.00978829s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 3 -> 1
+0.00979796s -1 InterruptController:IssueInterruptWithServiceOnCPU(): [INFO ] Interrupt 91 on CPU0
+EXEC  cpu0 +9797957.0ns        0    1    0    0    10379147  	irq_enter                     				x                                PROCESS		1925 763
+EXEC  cpu0 +9799332.0ns        0    1    0    0    10381148  	irq_enter                     				handle_irq_event_percpu+3d0                      DEQUEUE		SRVQUEUE 0 HIRQ
+EXEC  cpu0 +9799332.0ns        0    1    0    0    10383112  		HIRQ-91                       			x                                PROCESS		1232 340
+EXEC  cpu0 +9800034.0ns        0    1    0    0    10385113  		HIRQ-91                       			mmc_wait_done+1c                                 COMPL	(TEMP) global
+Tempvar 0x2379510
+HIRQ-91 
+HIRQ-91
+0.00980003s -1 TaskScheduler:PreEmpt(): [INFO ] CPU0: Context switch 1 -> 3
+0.00980003s -1 RoundRobinScheduler:DoDeallocateTempSynch(): [INFO ] Deallocating tempsync
+EXEC  cpu0 +9800034.0ns        0    1    0    0    10387114  		HIRQ-91                       			x                                PROCESS		631 191
+EXEC  cpu0 +9800615.0ns        0    1    0    0    10389116  		HIRQ-91                       			x                                PROCESS		4113 953
+EXEC  cpu0 +9803994.0ns        0    1    0    0    10391117  		HIRQ-91                       			0 STOP
+EXEC  cpu0 +9803994.0ns        0    1    0    0    10393149  	irq_enter                     				x                                PROCESS		2154 859
+EXEC  cpu0 +9806794.0ns        0    1    0    0    10395150  	irq_enter                     				0 STOP
+0.00980679s -1 TaskScheduler:Terminate(): [INFO ] Terminating 0
+EXEC  cpu0 +9806794.0ns        3    0    0    0    10397291  				dhdsdio_sendfromq+4c8         	x                                PROCESS		26008 3287
+EXEC  cpu0 +9829783.0ns        3    0    0    0    10399292  				dhdsdio_sendfromq+4c8         	dhdsdio_txpkt.constprop.10+51c                   ENQUEUE		PKTQUEUE 0 nic::tx
+0.00982978s -1 DropTailQueue:DoEnqueue(0x237ad10, 0x23afad0)
+0.00982978s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number packets 20
+0.00982978s -1 DropTailQueue:DoEnqueue(): [LOGIC] Number bytes 2000
++9829783.0ns: NIC transmits packet 19
+DELAYS: 217232 22994 37188 52369 329783

@@ -1,0 +1,4 @@
+$file=1.device
+Event count: 1207507
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   5,72s user 0,00s system 99% cpu 5,769 total
+$file=1.device

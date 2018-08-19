@@ -1,0 +1,90 @@
+$file=1.device
+Event count: 73043164
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   358,31s user 0,07s system 99% cpu 5:58,82 total
+$file=1.device
+Event count: 73043164
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   357,30s user 0,08s system 99% cpu 5:57,81 total
+$file=1.device
+Event count: 73043164
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   350,41s user 0,08s system 99% cpu 5:50,90 total
+$file=2.device
+Event count: 74042337
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   374,59s user 0,08s system 99% cpu 6:15,15 total
+$file=2.device
+Event count: 74042337
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   369,96s user 0,09s system 99% cpu 6:10,49 total
+$file=2.device
+Event count: 74042337
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   370,65s user 0,08s system 99% cpu 6:11,22 total
+$file=3.device
+Event count: 74242608
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   379,59s user 0,10s system 99% cpu 6:20,23 total
+$file=3.device
+Event count: 74242608
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   388,60s user 0,14s system 99% cpu 6:29,37 total
+$file=3.device
+Event count: 74242608
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   394,70s user 0,12s system 99% cpu 6:35,49 total
+$file=4.device
+Event count: 74242560
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   381,40s user 0,10s system 99% cpu 6:22,05 total
+$file=4.device
+Event count: 74242560
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   383,90s user 0,11s system 99% cpu 6:24,62 total
+$file=4.device
+Event count: 74242560
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   387,06s user 0,12s system 99% cpu 6:27,75 total
+$file=5.device
+Event count: 74242597
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   360,95s user 0,07s system 99% cpu 6:01,47 total
+$file=5.device
+Event count: 74242597
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   374,67s user 0,08s system 99% cpu 6:15,22 total
+$file=5.device
+Event count: 74242597
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   369,59s user 0,07s system 99% cpu 6:10,12 total
+$file=6.device
+Event count: 74242056
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   345,07s user 0,07s system 99% cpu 5:45,56 total
+$file=6.device
+Event count: 74242056
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   361,23s user 0,13s system 99% cpu 6:01,93 total
+$file=6.device
+Event count: 74242056
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   354,16s user 0,10s system 99% cpu 5:54,76 total
+$file=7.device
+Event count: 74175577
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   339,40s user 0,09s system 99% cpu 5:39,91 total
+$file=7.device
+Event count: 74175577
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   337,14s user 0,07s system 99% cpu 5:37,62 total
+$file=7.device
+Event count: 74175577
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   356,45s user 0,14s system 99% cpu 5:57,20 total
+$file=8.device
+Event count: 74042176
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   348,46s user 0,13s system 99% cpu 5:49,20 total
+$file=8.device
+Event count: 74042176
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   347,03s user 0,12s system 99% cpu 5:47,74 total
+$file=8.device
+Event count: 74042176
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   342,97s user 0,12s system 99% cpu 5:43,62 total
+$file=9.device
+Event count: 73962051
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   338,79s user 0,10s system 99% cpu 5:39,38 total
+$file=9.device
+Event count: 73962051
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   331,57s user 0,13s system 99% cpu 5:32,20 total
+$file=9.device
+Event count: 73962051
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   334,07s user 0,14s system 99% cpu 5:34,70 total
+$file=10.device
+Event count: 73909208
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   333,37s user 0,12s system 99% cpu 5:33,97 total
+$file=10.device
+Event count: 73909208
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   341,50s user 0,13s system 99% cpu 5:42,17 total
+$file=10.device
+Event count: 73909208
+LD_LIBRARY_PATH=./build ./build/scratch/scale --device=./scaletest/uni/$file   339,25s user 0,10s system 99% cpu 5:39,83 total

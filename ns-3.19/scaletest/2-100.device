@@ -1,0 +1,134 @@
+QUEUES
+HIRQ	 FIFO 	 -1    services
+
+HARDWARE
+PEU 1200 cpu0 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu1 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+
+SYNCH
+CONDITIONS
+TRIGGERS
+
+# Fake IRQ handler, not used
+SIGSTART
+NAME irq_enter
+PEU cpu
+RESOURCES cycles normal
+FRACTION 70%  11552 16388
+0 START
+0 STOP
+SIGEND
+
+SIGSTART
+NAME background_work
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 500 
+0 STOP
+
+SIGEND
+
+THREADS
+background1 background_work infinite 0
+background2 background_work infinite 0
+background3 background_work infinite 0
+background4 background_work infinite 0
+background5 background_work infinite 0
+background6 background_work infinite 0
+background7 background_work infinite 0
+background8 background_work infinite 0
+background9 background_work infinite 0
+background10 background_work infinite 0
+background11 background_work infinite 0
+background12 background_work infinite 0
+background13 background_work infinite 0
+background14 background_work infinite 0
+background15 background_work infinite 0
+background16 background_work infinite 0
+background17 background_work infinite 0
+background18 background_work infinite 0
+background19 background_work infinite 0
+background20 background_work infinite 0
+background21 background_work infinite 0
+background22 background_work infinite 0
+background23 background_work infinite 0
+background24 background_work infinite 0
+background25 background_work infinite 0
+background26 background_work infinite 0
+background27 background_work infinite 0
+background28 background_work infinite 0
+background29 background_work infinite 0
+background30 background_work infinite 0
+background31 background_work infinite 0
+background32 background_work infinite 0
+background33 background_work infinite 0
+background34 background_work infinite 0
+background35 background_work infinite 0
+background36 background_work infinite 0
+background37 background_work infinite 0
+background38 background_work infinite 0
+background39 background_work infinite 0
+background40 background_work infinite 0
+background41 background_work infinite 0
+background42 background_work infinite 0
+background43 background_work infinite 0
+background44 background_work infinite 0
+background45 background_work infinite 0
+background46 background_work infinite 0
+background47 background_work infinite 0
+background48 background_work infinite 0
+background49 background_work infinite 0
+background50 background_work infinite 0
+background51 background_work infinite 0
+background52 background_work infinite 0
+background53 background_work infinite 0
+background54 background_work infinite 0
+background55 background_work infinite 0
+background56 background_work infinite 0
+background57 background_work infinite 0
+background58 background_work infinite 0
+background59 background_work infinite 0
+background60 background_work infinite 0
+background61 background_work infinite 0
+background62 background_work infinite 0
+background63 background_work infinite 0
+background64 background_work infinite 0
+background65 background_work infinite 0
+background66 background_work infinite 0
+background67 background_work infinite 0
+background68 background_work infinite 0
+background69 background_work infinite 0
+background70 background_work infinite 0
+background71 background_work infinite 0
+background72 background_work infinite 0
+background73 background_work infinite 0
+background74 background_work infinite 0
+background75 background_work infinite 0
+background76 background_work infinite 0
+background77 background_work infinite 0
+background78 background_work infinite 0
+background79 background_work infinite 0
+background80 background_work infinite 0
+background81 background_work infinite 0
+background82 background_work infinite 0
+background83 background_work infinite 0
+background84 background_work infinite 0
+background85 background_work infinite 0
+background86 background_work infinite 0
+background87 background_work infinite 0
+background88 background_work infinite 0
+background89 background_work infinite 0
+background90 background_work infinite 0
+background91 background_work infinite 0
+background92 background_work infinite 0
+background93 background_work infinite 0
+background94 background_work infinite 0
+background95 background_work infinite 0
+background96 background_work infinite 0
+background97 background_work infinite 0
+background98 background_work infinite 0
+background99 background_work infinite 0
+background100 background_work infinite 0

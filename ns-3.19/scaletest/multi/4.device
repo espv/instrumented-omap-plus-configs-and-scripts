@@ -1,0 +1,108 @@
+QUEUES
+input	     FIFO 	 -1    packets
+internal	 FIFO 	 -1    packets
+out     	 FIFO 	 1    packets
+# Fake IRQ queue, not used
+HIRQ	     FIFO 	 -1    services
+
+HARDWARE
+PEU 1200 cpu0 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu1 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu2 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+PEU 1200 cpu3 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+
+SYNCH
+sem 0 0
+
+CONDITIONS
+TRIGGERS
+
+# Fake IRQ handler, not used
+SIGSTART
+NAME irq_enter
+PEU cpu
+RESOURCES cycles normal
+FRACTION 70%  11552 16388
+0 START
+0 STOP
+SIGEND
+
+SIGSTART
+NAME service_a
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+
+x QUEUECOND input input empty
+x PROCESS 1000 50
+0 STOP
+
+SIGEND
+
+SIGSTART
+NAME service_a
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+x QUEUECOND input input notempty
+x PROCESS 1000 50
+x DEQUEUE PKTQUEUE 0 input
+x PROCESS 1000 50
+x ENQUEUE PKTQUEUE 0 internal
+x PROCESS 1000 50
+x SEMUP sem global
+x PROCESS 1000 50
+
+0 STOP
+
+SIGEND
+
+
+SIGSTART
+NAME service_b
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+x SEMDOWN sem global
+x PROCESS 1000 50
+x DEQUEUE PKTQUEUE 0 internal
+x PROCESS 1000 50
+x ENQUEUE PKTQUEUE 0 out
+x PROCESS 1000 50
+0 STOP
+
+SIGEND
+
+
+SIGSTART
+NAME background_work
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 50
+0 STOP
+
+SIGEND
+
+THREADS
+t1 service_a infinite 0
+t2 service_b infinite 0
+t3 service_b infinite 0
+# t4 service_b infinite 0
+# t5 service_b infinite 0
+background1 background_work infinite 0
+background2 background_work infinite 0
+# background3 background_work infinite 0
+# background4 background_work infinite 0
+# background5 background_work infinite 0

@@ -1,0 +1,55 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('linsched', ['core'])
+    module.includes = '.'
+    module.source = [
+        'model/linsched/linux_linsched.c',
+        'model/linsched/numa.c',
+        'model/linsched/hrtimer.c',
+        'model/linsched/stubs.c',
+	'model/linsched/fractional_cpu_test.c',
+        'model/linsched/LS-to-ns3.cpp',
+	'model/kernel/notifier.c',
+	'model/kernel/timer.c',
+	'model/kernel/time/clockevents.c',
+	'model/kernel/sched.c',
+	'model/kernel/fork.c',
+	'model/arch/x86/kernel/init_task.c',
+	'model/kernel/exit.c',
+	'model/kernel/time.c',
+	'model/kernel/cpu.c',
+	'model/mm/percpu.c',
+	'model/kernel/sched_clock.c',
+	'model/kernel/sched_cpupri.c',
+	'model/kernel/hrtimer.c',
+	'model/kernel/cred.c',
+	'model/kernel/signal.c',
+	'model/kernel/pid.c',
+	'model/kernel/time/timekeeping.c',
+	'model/kernel/time/ntp.c',
+	'model/kernel/time/jiffies.c',
+	'model/kernel/time/tick-common.c',
+	'model/kernel/time/tick-oneshot.c',
+	'model/kernel/time/tick-sched.c',
+	'model/kernel/time/tick-broadcast.c',
+	'model/init/main.c',
+	'model/lib/rbtree.c',
+	'model/lib/div64.c',
+	'model/lib/cpumask.c',
+	'model/lib/bitmap.c',
+	'model/lib/list_debug.c',
+	'model/lib/find_next_bit.c',
+	'model/lib/hweight.c',
+	'model/lib/reciprocal_div.c',
+	'model/lib/plist.c',
+	'model/lib/vsprintf.c',
+	'model/lib/ctype.c'
+        ]
+
+    headers = bld.new_task_gen(features=['ns3header'])
+    headers.module = 'linsched'
+    headers.source = [
+        'model/linsched/cosim.h',
+        ]
+

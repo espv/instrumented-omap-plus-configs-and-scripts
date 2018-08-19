@@ -1,0 +1,7 @@
+count=1
+Event count: 73909151
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     403,65s user 0,08s system 97% cpu 6:55,39 total
+count=1
+Event count: 73909151
+LD_LIBRARY_PATH=./build ./build/scratch/scale --count="$count"     388,97s user 0,03s system 99% cpu 6:32,51 total
+count=1

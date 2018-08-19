@@ -1,0 +1,57 @@
+* remote origin
+  Fetch URL: https://android.googlesource.com/kernel/omap.git
+  Push  URL: https://android.googlesource.com/kernel/omap.git
+  HEAD branch: master
+  Remote branches:
+    android-omap-3.0                               tracked
+    android-omap-minnow-3.10-kitkat-wear           tracked
+    android-omap-minnow-3.10-lollipop-wear-release tracked
+    android-omap-panda-3.0                         tracked
+    android-omap-steelhead-3.0-ics-aah             tracked
+    android-omap-tuna-3.0                          tracked
+    android-omap-tuna-3.0-ics-mr1                  tracked
+    android-omap-tuna-3.0-jb-mr0                   tracked
+    android-omap-tuna-3.0-jb-mr1                   tracked
+    android-omap-tuna-3.0-jb-mr1.1                 tracked
+    android-omap-tuna-3.0-jb-mr2                   tracked
+    android-omap-tuna-3.0-jb-pre1                  tracked
+    android-omap-tuna-3.0-mr0                      tracked
+    android-omap-tuna-3.0-mr0.1                    tracked
+    glass-omap-xrr02                               tracked
+    glass-omap-xrr35                               tracked
+    glass-omap-xrr64b                              tracked
+    glass-omap-xrr88                               tracked
+    glass-omap-xrs36                               tracked
+    glass-omap-xrs68                               tracked
+    glass-omap-xrs92                               tracked
+    glass-omap-xrt35                               tracked
+    glass-omap-xrt73b                              tracked
+    glass-omap-xru85b                              tracked
+    glass-omap-xrv15b                              tracked
+    glass-omap-xrv15c                              tracked
+    glass-omap-xrv16                               tracked
+    glass-omap-xrv22                               tracked
+    glass-omap-xrv27                               tracked
+    glass-omap-xrv34                               tracked
+    glass-omap-xrv39                               tracked
+    glass-omap-xrv49                               tracked
+    glass-omap-xrv60b                              tracked
+    glass-omap-xrv67                               tracked
+    glass-omap-xrv70d                              tracked
+    glass-omap-xrv72                               tracked
+    glass-omap-xrv85b                              tracked
+    glass-omap-xrv87                               tracked
+    glass-omap-xrw14b                              tracked
+    glass-omap-xrw45c                              tracked
+    glass-omap-xrw66                               tracked
+    glass-omap-xrw85                               tracked
+    glass-omap-xrx13b                              tracked
+    linux-omap-3.0                                 tracked
+    master                                         tracked
+    sph-l700-fh05                                  tracked
+  Local branches configured for 'git pull':
+    android-omap-tuna-3.0-jb-mr2 merges with remote android-omap-tuna-3.0-jb-mr2
+    master                       merges with remote master
+  Local refs configured for 'git push':
+    android-omap-tuna-3.0-jb-mr2 pushes to android-omap-tuna-3.0-jb-mr2 (up to date)
+    master                       pushes to master                       (up to date)

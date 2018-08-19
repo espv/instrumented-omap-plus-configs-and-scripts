@@ -1,0 +1,18 @@
+config SEPEXTRACTTRACER
+	tristate "Event Collector for Signature Extraction"
+	depends on SEPEXTRACT
+
+config SEPEXT_TRACEPOINTS_ENABLED
+	bool "Enable tracepoints"
+	default y
+	depends on SEPEXTRACTTRACER
+
+config SEPEXT_PKTEXTR
+	bool "Enable packet extractors"
+	default y
+	depends on SEPEXTRACTTRACER
+
+config SEPEXT_MIGRATION
+	bool "Enable tracing of process migrations"
+	default y
+	depends on SEPEXTRACTTRACER

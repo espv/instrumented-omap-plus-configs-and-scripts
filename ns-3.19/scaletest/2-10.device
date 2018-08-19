@@ -1,0 +1,44 @@
+QUEUES
+HIRQ	 FIFO 	 -1    services
+
+HARDWARE
+PEU 1200 cpu0 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+# PEU 1200 cpu1 ns3::processing::RoundRobinScheduler 0 irq_enter HIRQ
+
+SYNCH
+CONDITIONS
+TRIGGERS
+
+# Fake IRQ handler, not used
+SIGSTART
+NAME irq_enter
+PEU cpu
+RESOURCES cycles normal
+FRACTION 70%  11552 16388
+0 START
+0 STOP
+SIGEND
+
+SIGSTART
+NAME background_work
+PEU cpu
+RESOURCES cycles normal
+FRACTION 100%  1 1
+
+0 START
+x PROCESS 1000 500 
+0 STOP
+
+SIGEND
+
+THREADS
+background1 background_work infinite 0
+background2 background_work infinite 0
+background3 background_work infinite 0
+background4 background_work infinite 0
+background5 background_work infinite 0
+background6 background_work infinite 0
+background7 background_work infinite 0
+background8 background_work infinite 0
+background9 background_work infinite 0
+background10 background_work infinite 0

@@ -1,0 +1,7 @@
+build/*
+backup/*
+.waf-*
+.lock-waf*
+*.pyc
+tags
+.ycm_extra_conf.py

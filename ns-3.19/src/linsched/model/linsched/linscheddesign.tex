@@ -1,0 +1,9 @@
+The linux timer architecture:
+- All PCs have a Real Time Clock (RTC)
+- 80x86 CPUs have a CLK pin, receiving clock signal from external oscillator. From Pentium and on, the Time Stamp Cpunter (TSC) is increased every clock signal, the contents of which is accessible through the assembly instruction rdtsc (read TSC).
+- Programmable interrupt timer (PIT) (at least one in IBM computers, probably present on most architectures?) is used to generate IRQ0 interrupts with a given frequency. This is used to generate the ticks used for context switching. The frequency used is obtained by the macro HZ, and is set to 1000 for fast computers such as IBM PCs. HZ is set to 100 on GN1. 16 bits long register which generates an interrupt every overflow of LATCH cycles in this timer.
+- CPU Local Timer, part of the per-CPU Advanced Programmable Interrupt Controller (APIC). Is 32 bits long, and only generates interrupts for the CPU to which it is connected. Based on bus clock signal, thus not as flexible as the PIC. [1] does not say anything about what it is used for in linux.
+- 
+
+LinSched execution flow:
+- 
